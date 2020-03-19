@@ -15,7 +15,7 @@
 
  * [相关端口](chapters/1-port.md)
 
- * [certs](capters/1-certs.md)
+ * [certs](chapters/1-certs.md)
 
 * [三. TODO](chapters/3.md)
 
