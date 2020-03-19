@@ -1,11 +1,4 @@
- * [master组件](#master组件)
-    * [kube-apiserver](#kube-apiserver)
-    * [kube-scheduler](#kube-scheduler)
-    * [kube-controller-manager](#kube-controller-manager)
-    * [etcd](#etcd)
- * [node组件](#node组件)
-    * [kubelet](#kubelet)
-    * [kube-proxy](#kube-proxy)
+[toc]
 
 ### master组件
 
@@ -32,6 +25,10 @@ apiserver提供了k8s各类资源对象的增删改查及watch等HTTP Rest接口
 一个在集群中每个节点上运行的代理。它保证容器都运行在 Pod 中。
 
 kubelet 接收一组通过各类机制提供给它的 PodSpecs，确保这些 PodSpecs 中描述的容器处于运行状态且健康。kubelet 不会管理不是由 Kubernetes 创建的容器。
+
+**kubelet 组件在工作时，采用主动的查询机制，即定期请求 apiserver 获取自己所应当处理的任务，如哪些 pod 分配到了自己身上，从而去处理这些任务；同时 kubelet 自己还会暴露出两个本身 api 的端口，用于将自己本身的私有 api 暴露出去，这两个端口分别是 10250 与 10255；对于 10250 端口，kubelet 会在其上采用 TLS 加密以提供适当的鉴权功能；对于 10255 端口，kubelet 会以只读形式暴露组件本身的私有 api，并且不做鉴权处理**
+
+**总结一下，就是说 kubelet 上实际上有两个地方用到证书，一个是用于与 API server 通讯所用到的证书，另一个是 kubelet 的 10250 私有 api 端口需要用到的证书**
 
 #### kube-proxy
 
