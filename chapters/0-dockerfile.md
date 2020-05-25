@@ -1,4 +1,4 @@
-[toc]
+>  一些dockerfile https://github.com/llussy/Dockerfile (更新)
 
 ### alpine
 
@@ -14,10 +14,10 @@ apk add 安装软件
 
 ```dockerfile
 FROM docker.ifeng.com/base/alpine:3.4
-RUN apk add --no-cache redis sed bash  
+RUN apk add --no-cache redis sed bash
 RUN sed -i "s/bind 127.0.0.1/#bind 127.0.0.1/g" /etc/redis.conf
-COPY run.sh /run.sh  
-CMD [ "/run.sh" ]  
+COPY run.sh /run.sh
+CMD [ "/run.sh" ]
 ENTRYPOINT [ "bash" ]
 ```
 
@@ -26,7 +26,7 @@ ENTRYPOINT [ "bash" ]
 ```dockerfile
 FROM alpine:3.7
 
-MAINTAINER Rethink 
+MAINTAINER Rethink
 #更新Alpine的软件源为国内（清华大学）的站点，因为从默认官源拉取实在太慢了。。。
 RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main/" > /etc/apk/repositories
 
