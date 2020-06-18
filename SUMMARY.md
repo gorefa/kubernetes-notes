@@ -17,6 +17,8 @@
 
  * [certs](chapters/1-certs.md)
 
+ * [liveness和readiness](chapters/1-probe.md)
+
 * [三. TODO](chapters/3.md)
 
 * [四. TODO](chapters/4.md)
