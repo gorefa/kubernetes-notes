@@ -1,5 +1,5 @@
 # Summary
-* [一. docker 知识](chapters/0.md)
+* [docker](chapters/0.md)
 
  * [docker](chapters/0-docker.md)
 
@@ -7,7 +7,7 @@
 
  * [docker-tls](chapters/0-dockertls.md)
 
-* [二. kubernetes介绍](chapters/1.md)
+* [ kubernetes](chapters/1.md)
 
  * [kubernetes component](chapters/1-component.md)
 
@@ -19,8 +19,8 @@
 
  * [liveness和readiness](chapters/1-probe.md)
 
-* [三. TODO](chapters/3.md)
+* [TODO](chapters/3.md)
 
-* [四. TODO](chapters/4.md)
+* [TODO](chapters/4.md)
 
 
