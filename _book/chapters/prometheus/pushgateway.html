@@ -1,0 +1,637 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>pushgateway · Kubernetes GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="llussy <usanfeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="consul.html" />
+    
+    
+    <link rel="prev" href="job.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://llussy.github.io" target="_blank" class="custom-link">Llussy's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../docker/docker.html">
+            
+                <a href="../docker/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../docker/dockerfile.html">
+            
+                <a href="../docker/dockerfile.html">
+            
+                    
+                    dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../docker/dockertls.html">
+            
+                <a href="../docker/dockertls.html">
+            
+                    
+                    docker-tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                     kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../kubernetes/component.html">
+            
+                <a href="../kubernetes/component.html">
+            
+                    
+                    kubernetes component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../kubernetes/concept.html">
+            
+                <a href="../kubernetes/concept.html">
+            
+                    
+                    concept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../kubernetes/port.html">
+            
+                <a href="../kubernetes/port.html">
+            
+                    
+                    相关端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../kubernetes/-certs.md">
+            
+                <span>
+            
+                    
+                    certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../kubernetes/probe.html">
+            
+                <a href="../kubernetes/probe.html">
+            
+                    
+                    liveness和readiness
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    prometheus
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="prometheus.html">
+            
+                <a href="prometheus.html">
+            
+                    
+                    prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="query.html">
+            
+                <a href="query.html">
+            
+                    
+                    query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="metrics.html">
+            
+                <a href="metrics.html">
+            
+                    
+                    metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="job.md">
+            
+                <span>
+            
+                    
+                    job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="pushgateway.html">
+            
+                <a href="pushgateway.html">
+            
+                    
+                    pushgateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="consul.html">
+            
+                <a href="consul.html">
+            
+                    
+                    consul
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    log
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    storage
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    helm
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    ingress
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    etcd
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../4.md">
+            
+                <span>
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >pushgateway</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="pushgateway&#x4ECB;&#x7ECD;">Pushgateway&#x4ECB;&#x7ECD;</h3>
+<p><a href="https://github.com/prometheus/pushgateway" target="_blank">Pushgateway</a> &#x662F; Prometheus &#x751F;&#x6001;&#x4E2D;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x5DE5;&#x5177;&#xFF0C;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x539F;&#x56E0;&#x4E3B;&#x8981;&#x662F;&#xFF1A;</p>
+<ul>
+<li><p>Prometheus &#x91C7;&#x7528; pull &#x6A21;&#x5F0F;&#xFF0C;&#x53EF;&#x80FD;&#x7531;&#x4E8E;&#x4E0D;&#x5728;&#x4E00;&#x4E2A;&#x5B50;&#x7F51;&#x6216;&#x8005;&#x9632;&#x706B;&#x5899;&#x539F;&#x56E0;&#xFF0C;&#x5BFC;&#x81F4; Prometheus &#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x62C9;&#x53D6;&#x5404;&#x4E2A; target &#x6570;&#x636E;&#x3002;</p>
+</li>
+<li><p>&#x5728;&#x76D1;&#x63A7;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6C47;&#x603B;, &#x7531; Prometheus &#x7EDF;&#x4E00;&#x6536;&#x96C6;&#x3002;</p>
+<pre><code>  Pushgateway&#x5E76;&#x4E0D;&#x662F;&#x5C06;Prometheus&#x7684;pull&#x6539;&#x6210;&#x4E86;push&#xFF0C;&#x5B83;&#x53EA;&#x662F;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5411;&#x4ED6;&#x63A8;&#x9001;&#x6307;&#x6807;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x8BB0;&#x5F55;&#x3002;&#x800C;Prometheus&#x6BCF;&#x6B21;&#x4ECE; Pushgateway&#x62C9;&#x53D6;&#x7684;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x662F;&#x671F;&#x95F4;&#x7528;&#x6237;&#x63A8;&#x9001;&#x4E0A;&#x6765;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B21;push&#x4E0A;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;&#x6240;&#x4EE5;&#x8BBE;&#x7F6E;&#x63A8;&#x9001;&#x65F6;&#x95F4;&#x4E0E;Prometheus&#x62C9;&#x53D6;&#x7684;&#x65F6;&#x95F4;&#x76F8;&#x540C;(&lt;=)&#x4E00;&#x822C;&#x662F;&#x8F83;&#x597D;&#x7684;&#x65B9;&#x6848;&#x3002;
+</code></pre></li>
+</ul>
+<h3 id="prometheus&#x589E;&#x52A0;pushgateway">prometheus&#x589E;&#x52A0;pushgateway</h3>
+<pre><code class="lang-bash">  - job_name: pushgateway
+    static_configs:
+      - targets: [<span class="hljs-string">&apos;192.168.91.132:9091&apos;</span>]
+        labels:
+          instance: pushgateway
+</code></pre>
+<h3 id="&#x6570;&#x636E;&#x7BA1;&#x7406;">&#x6570;&#x636E;&#x7BA1;&#x7406;</h3>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528; Client SDK &#x63A8;&#x9001;&#x6570;&#x636E;&#x5230; pushgateway, &#x4F46;&#x662F;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; API &#x6765;&#x7BA1;&#x7406;&#x3002;</p>
+<h4 id="shell&#x811A;&#x672C;">shell&#x811A;&#x672C;</h4>
+<p>shell&#x811A;&#x672C; --data-binary &#x8868;&#x793A;&#x53D1;&#x9001;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#xFF0C;&#x6CE8;&#x610F;&#xFF1A;&#x5B83;&#x662F;&#x4F7F;&#x7528;POST&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x7684;&#xFF01; 
+<strong>&#x589E;&#x52A0;&#x6570;&#x636E;</strong></p>
+<pre><code class="lang-bash">cat &lt;&lt;EOF | curl --data-binary @- http://pushgateway.test.com/metrics/job/some_job/instance/some_instance
+ifeng_a_some_metric{label=<span class="hljs-string">&quot;test&quot;</span>,IDC=<span class="hljs-string">&quot;SYQ&quot;</span>} 100
+EOF
+
+&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x662F;&#x6307;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x624D;&#x884C;&#xFF01; 
+pushgateway &#x4E2D;&#x7684;&#x6570;&#x636E;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x6309;&#x7167; job &#x548C; instance &#x5206;&#x7EC4;&#x5206;&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5C3D;&#x91CF;&#x5199;&#x5168;
+
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;some_metric 3.14&quot;</span> | curl --data-binary @- http://pushgateway.example.org:9091/metrics/job/some_job
+
+
+cat &lt;&lt;EOF | curl --data-binary @- http://pushgateway.example.org:9091/metrics/job/some_job/instance/some_instance
+<span class="hljs-comment"># TYPE some_metric counter</span>
+some_metric{label=<span class="hljs-string">&quot;val1&quot;</span>} 42
+<span class="hljs-comment"># TYPE another_metric gauge</span>
+<span class="hljs-comment"># HELP another_metric Just an example.</span>
+another_metric 2398.283
+EOF
+</code></pre>
+<p><strong>&#x5220;&#x9664;&#x6570;&#x636E;</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x7EC4;&#x4E0B;&#x7684;&#x67D0;&#x5B9E;&#x4F8B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF1A;</span>
+curl -X DELETE http://pushgateway.example.org:9091/metrics/job/some_job/instance/some_instance
+
+<span class="hljs-comment">#&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x7EC4;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF1A;</span>
+curl -X DELETE http://pushgateway.example.org:9091/metrics/job/some_job
+</code></pre>
+<h4 id="ps-aux&#x63A8;&#x9001;&#x5230;pushgateway">ps aux&#x63A8;&#x9001;&#x5230;pushgateway</h4>
+<pre><code class="lang-bash">If you want the same script <span class="hljs-keyword">for</span> memory usage, simply change the &#x2018;cpu_usage&#x2019; label to &#x2018;memory_usage&#x2019; and the <span class="hljs-variable">$3z</span> to <span class="hljs-variable">$4z</span>
+
+vim better-top 
+<span class="hljs-meta">#!/bin/bash</span>
+z=$(ps aux)
+<span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> -r z
+<span class="hljs-keyword">do</span>
+   var=<span class="hljs-variable">$var</span>$(awk <span class="hljs-string">&apos;{print &quot;cpu_usage{process=\&quot;&quot;$11&quot;\&quot;, pid=\&quot;&quot;$2&quot;\&quot;}&quot;, $3z}&apos;</span>);
+<span class="hljs-keyword">done</span> &lt;&lt;&lt; <span class="hljs-string">&quot;<span class="hljs-variable">$z</span>&quot;</span>
+curl -X POST -H  <span class="hljs-string">&quot;Content-Type: text/plain&quot;</span> --data <span class="hljs-string">&quot;<span class="hljs-variable">$var</span>
+&quot;</span> http://localhost:9091/metrics/job/top/instance/machine
+
+
+<span class="hljs-keyword">while</span> sleep 1; <span class="hljs-keyword">do</span> ./better-top; <span class="hljs-keyword">done</span>;
+</code></pre>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<p><a href="https://www.cnblogs.com/xiao987334176/p/9933963.html" target="_blank">pushgateway</a></p>
+<p><a href="https://medium.com/schkn/monitoring-linux-processes-using-prometheus-and-grafana-113b3e271971" target="_blank">Monitoring Linux Processes using Prometheus and Grafana</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="job.md" class="navigation navigation-prev " aria-label="Previous page: job">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="consul.html" class="navigation navigation-next " aria-label="Next page: consul">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"pushgateway","level":"1.4.5","depth":2,"next":{"title":"consul","level":"1.4.6","depth":2,"path":"chapters/prometheus/consul.md","ref":"chapters/prometheus/consul.md","articles":[]},"previous":{"title":"job","level":"1.4.4","depth":2,"path":"chapters/prometheus/job.md","ref":"chapters/prometheus/job.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gorefa-kubernetes"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"llussy <usanfeng@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kubernetes GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Llussy's Blog":"https://llussy.github.io"}},"gitbook":"*","description":"study kubernetes book created by gitbook","extension":null},"file":{"path":"chapters/prometheus/pushgateway.md","mtime":"2020-06-19T01:38:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T01:09:16.531Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
