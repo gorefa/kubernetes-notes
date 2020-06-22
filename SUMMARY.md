@@ -11,7 +11,7 @@
   * [liveness和readiness](chapters/kubernetes/probe.md)
 * [prometheus]()
   * [prometheus](chapters/prometheus/prometheus.md)
-* [query](chapters/prometheus/query.md)
+  * [query](chapters/prometheus/query.md)
   * [metrics](chapters/prometheus/metrics.md)
   * [job](chapters/prometheus/job.md)
   * [pushgateway](chapters/prometheus/pushgateway.md)
