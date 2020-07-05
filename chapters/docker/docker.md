@@ -2,6 +2,9 @@
 
 ### docker安装
 
+#### centos
+
+
 ```bash
 # docker官方包下载地址
 https://download.docker.com/linux/centos/7/x86_64/stable/Packages/
@@ -9,6 +12,64 @@ https://download.docker.com/linux/centos/7/x86_64/stable/Packages/
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum install docker-ce
 
+mkdir -p /etc/docker/
+cat>/etc/docker/daemon.json<<EOF
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "registry-mirrors": ["https://fz5yth0r.mirror.aliyuncs.com"],
+  "data-root": "/data/docker",
+  "storage-driver": "overlay2",
+  "storage-opts": [
+    "overlay2.override_kernel_check=true"
+  ],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m",
+    "max-file": "3"
+  }
+}
+EOF
+
+yum install -y epel-release bash-completion && cp /usr/share/bash-completion/completions/docker /etc/bash_completion.d/
+systemctl enable --now docker
+
+```
+
+#### ubuntu
+```bash
+apt-get remove docker docker-engine docker.io -y 
+sudo apt-get update
+sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common -y 
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable"
+add-apt-repository ppa:ubuntu-sdk-team/ppa
+apt-get update
+
+
+# apt-cache madison docker-ce
+ docker-ce | 18.03.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 18.03.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.12.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.12.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.09.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.09.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.06.2~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.06.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.06.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.03.2~ce-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.03.1~ce-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ docker-ce | 17.03.0~ce-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+ 
+ 
+apt install docker-ce -y
+```
+
+
+#### 自动补全
+
+```bash
 # 自动补全
 curl -L https://raw.githubusercontent.com/docker/docker/v$(docker version -f "{{.Client.Version}}")/contrib/completion/bash/docker -o /etc/bash_completion.d/docker
 
@@ -157,7 +218,7 @@ Docker 可以通过 -c 或 --cpu-shares 设置容器使用 CPU 的权重。如�
 
 `CMD ["nginx", "-g", "daemon off;"]`
 
-### 情况docker空间
+### 清理docker空间
 
 ```bash
 docker network prune --filter "until=24h"
