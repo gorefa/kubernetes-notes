@@ -1,0 +1,25 @@
+{
+    "author": "llussy <usanfeng@gmail.com>",
+    "description": "study kubernetes notes created by gitbook",
+    "plugins": [
+        "lunr",
+        "pageview-count",
+        "code",
+        "expandable-chapters",
+        "hide-element"
+    ],
+    "pluginsConfig": {
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+        "sharing": {
+            "douban": true,
+            "facebook": true,
+            "google": true,
+            "qq": true,
+            "qzone": true
+      }
+    },
+    "title": "Kubernetes GitBook",
+    "variables": {}
+}

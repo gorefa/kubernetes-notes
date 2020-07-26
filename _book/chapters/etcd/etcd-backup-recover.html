@@ -1,0 +1,838 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>etcd备份恢复 · Kubernetes GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="llussy <usanfeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../4.md" />
+    
+    
+    <link rel="prev" href="etcd-cmd.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../docker/docker.html">
+            
+                <a href="../docker/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../docker/dockerfile.html">
+            
+                <a href="../docker/dockerfile.html">
+            
+                    
+                    dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../docker/dockertls.html">
+            
+                <a href="../docker/dockertls.html">
+            
+                    
+                    docker-tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../docker/harbor.html">
+            
+                <a href="../docker/harbor.html">
+            
+                    
+                    harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                     kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../kubernetes/component.html">
+            
+                <a href="../kubernetes/component.html">
+            
+                    
+                    kubernetes component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../kubernetes/concept.html">
+            
+                <a href="../kubernetes/concept.html">
+            
+                    
+                    concept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../kubernetes/port.html">
+            
+                <a href="../kubernetes/port.html">
+            
+                    
+                    相关端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../kubernetes/certs.html">
+            
+                <a href="../kubernetes/certs.html">
+            
+                    
+                    certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../kubernetes/services.html">
+            
+                <a href="../kubernetes/services.html">
+            
+                    
+                    services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../kubernetes/probe.html">
+            
+                <a href="../kubernetes/probe.html">
+            
+                    
+                    liveness和readiness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../kubernetes/statefuleset.md">
+            
+                <span>
+            
+                    
+                    statefulset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    prometheus
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../prometheus/prometheus.html">
+            
+                <a href="../prometheus/prometheus.html">
+            
+                    
+                    prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../prometheus/query.html">
+            
+                <a href="../prometheus/query.html">
+            
+                    
+                    query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../prometheus/metrics.html">
+            
+                <a href="../prometheus/metrics.html">
+            
+                    
+                    metrics类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../prometheus/job.md">
+            
+                <span>
+            
+                    
+                    job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../prometheus/pushgateway.html">
+            
+                <a href="../prometheus/pushgateway.html">
+            
+                    
+                    pushgateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../prometheus/consul.html">
+            
+                <a href="../prometheus/consul.html">
+            
+                    
+                    结合consul
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    log
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../log/elk.html">
+            
+                <a href="../log/elk.html">
+            
+                    
+                    elk日志收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../log/loki.html">
+            
+                <a href="../log/loki.html">
+            
+                    
+                    loki
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    storage
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    helm
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    ingress
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    etcd
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="etcd-install.html">
+            
+                <a href="etcd-install.html">
+            
+                    
+                    etcd安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="etcd-cmd.html">
+            
+                <a href="etcd-cmd.html">
+            
+                    
+                    etcd常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3" data-path="etcd-backup-recover.html">
+            
+                <a href="etcd-backup-recover.html">
+            
+                    
+                    etcd备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../4.md">
+            
+                <span>
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >etcd备份恢复</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="etcd-v3-&#x5907;&#x4EFD;&#x96C6;&#x7FA4;">etcd v3 &#x5907;&#x4EFD;&#x96C6;&#x7FA4;</h3>
+<p>&#x6062;&#x590D;&#x96C6;&#x7FA4;&#x9996;&#x5148;&#x9700;&#x8981;&#x6765;&#x81EA; etcd &#x6210;&#x5458;&#x7684;&#x952E;&#x7A7A;&#x95F4;&#x7684;&#x5FEB;&#x7167;&#x3002;&#x5FEB;&#x901F;&#x53EF;&#x4EE5;&#x662F;&#x7528; <code>etcdctl snapshot save</code> &#x547D;&#x4EE4;&#x4ECE;&#x6D3B;&#x52A8;&#x6210;&#x5458;&#x83B7;&#x53D6;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x4ECE; etcd &#x6570;&#x636E;&#x76EE;&#x5F55;&#x590D;&#x5236; <code>member/snap/db</code> &#x6587;&#x4EF6;. &#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x5217;&#x547D;&#x4EE4;&#x5FEB;&#x7167;&#x5728; <code>$ENDPOINT</code> &#x4E0A;&#x670D;&#x52A1;&#x7684;&#x952E;&#x7A7A;&#x95F4;&#x5230;&#x6587;&#x4EF6; <code>snapshot.db</code>:</p>
+<pre><code class="lang-bash">ETCDCTL_API=3 ./etcdctl --endpoints <span class="hljs-string">&apos;https://10.21.8.24:2379,https://10.21.8.25:2379,https://10.21.8.26:2379&apos;</span> --cacert /etc/etcd/ssl/etcd-ca.pem --cert /etc/etcd/ssl/etcd.pem --key /etc/etcd/ssl/etcd-key.pem snapshot save /snapshot/$(date +%Y%m%d_%H%M%S)_snapshot.db
+</code></pre>
+<h4 id="cronjob-&#x5907;&#x4EFD;">cronjob &#x5907;&#x4EFD;</h4>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> batch/v1beta1 
+<span class="hljs-attr">kind:</span> CronJob
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> etcd-disaster-recovery
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr"> schedule:</span> <span class="hljs-string">&quot;*/1 * * * *&quot;</span>
+<span class="hljs-attr"> jobTemplate:</span>
+<span class="hljs-attr">  spec:</span>
+<span class="hljs-attr">    template:</span>
+<span class="hljs-attr">      metadata:</span>
+<span class="hljs-attr">       labels:</span>
+<span class="hljs-attr">        app:</span> etcd-disaster-recovery
+<span class="hljs-attr">      spec:</span>
+<span class="hljs-attr">        affinity:</span>
+<span class="hljs-attr">          nodeAffinity:</span>
+<span class="hljs-attr">            requiredDuringSchedulingIgnoredDuringExecution:</span>
+<span class="hljs-attr">                  nodeSelectorTerms:</span>
+<span class="hljs-attr">                  - matchExpressions:</span>
+<span class="hljs-attr">                    - key:</span> role
+<span class="hljs-attr">                      operator:</span> In
+<span class="hljs-attr">                      values:</span>
+<span class="hljs-bullet">                      -</span> master
+<span class="hljs-attr">        containers:</span>
+<span class="hljs-attr">        - name:</span> etcd
+<span class="hljs-attr">          image:</span> mirrorgooglecontainers/etcd-amd64:<span class="hljs-number">3.1</span><span class="hljs-number">.13</span>
+<span class="hljs-attr">          command:</span>
+<span class="hljs-bullet">          -</span> sh
+<span class="hljs-bullet">          -</span> -c
+<span class="hljs-bullet">          -</span> <span class="hljs-string">&quot;ETCDCTL_API=3 etcdctl --endpoints &apos;https://10.21.8.24:2379,https://10.21.8.25:2379,https://10.21.8.26:2379&apos; --cacert /etc/etcd/ssl/etcd-ca.pem --cert /etc/etcd/ssl/etcd.pem --key /etc/etcd/ssl/etcd-key.pem snapshot save /snapshot/$(date +%Y%m%d_%H%M%S)_snapshot.db; \
+             echo etcd backup sucess&quot;</span>
+<span class="hljs-attr">          volumeMounts:</span>
+<span class="hljs-attr">            - mountPath:</span> <span class="hljs-string">&quot;/snapshot&quot;</span>
+<span class="hljs-attr">              name:</span> snapshot
+<span class="hljs-attr">              subPath:</span> data/etcd-snapshot
+<span class="hljs-attr">            - mountPath:</span> /etc/localtime
+<span class="hljs-attr">              name:</span> lt-config
+<span class="hljs-attr">            - mountPath:</span> /etc/timezone
+<span class="hljs-attr">              name:</span> tz-config
+<span class="hljs-attr">            - mountPath:</span> /etc/etcd/ssl
+<span class="hljs-attr">              name:</span> etcd-certs
+<span class="hljs-attr">        restartPolicy:</span> OnFailure
+<span class="hljs-attr">        volumes:</span>
+<span class="hljs-attr">          - name:</span> snapshot
+<span class="hljs-attr">            persistentVolumeClaim:</span>
+<span class="hljs-attr">              claimName:</span> cron-nas
+<span class="hljs-attr">          - name:</span> lt-config
+<span class="hljs-attr">            hostPath:</span>
+<span class="hljs-attr">              path:</span> /etc/localtime
+<span class="hljs-attr">          - name:</span> tz-config
+<span class="hljs-attr">            hostPath:</span>
+<span class="hljs-attr">              path:</span> /etc/timezone
+<span class="hljs-attr">          - name:</span> etcd-certs
+<span class="hljs-attr">            hostPath:</span>
+<span class="hljs-attr">              path:</span> /etc/etcd/ssl
+<span class="hljs-attr">        hostNetwork:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<h3 id="etcd-v3-&#x6062;&#x590D;&#x96C6;&#x7FA4;">etcd v3 &#x6062;&#x590D;&#x96C6;&#x7FA4;</h3>
+<p>&#x4E3A;&#x4E86;&#x6062;&#x590D;&#x96C6;&#x7FA4;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5FEB;&#x7167; &quot;db&quot; &#x6587;&#x4EF6;&#x3002;&#x4F7F;&#x7528; <code>etcdctl snapshot restore</code> &#x7684;&#x96C6;&#x7FA4;&#x6062;&#x590D;&#x521B;&#x5EFA;&#x65B0;&#x7684; etcd &#x6570;&#x636E;&#x76EE;&#x5F55;;&#x6240;&#x6709;&#x6210;&#x5458;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5FEB;&#x7167;&#x6062;&#x590D;&#x3002;&#x6062;&#x590D;&#x8986;&#x76D6;&#x67D0;&#x4E9B;&#x5FEB;&#x7167;&#x5143;&#x6570;&#x636E;(&#x7279;&#x522B;&#x662F;&#xFF0C;&#x6210;&#x5458;ID&#x548C;&#x96C6;&#x7FA4;ID);&#x6210;&#x5458;&#x4E22;&#x5931;&#x5B83;&#x4E4B;&#x524D;&#x7684;&#x6807;&#x8BC6;&#x3002;&#x8FD9;&#x4E2A;&#x5143;&#x6570;&#x636E;&#x8986;&#x76D6;&#x9632;&#x6B62;&#x65B0;&#x7684;&#x6210;&#x5458;&#x4E0D;&#x7ECF;&#x610F;&#x95F4;&#x52A0;&#x5165;&#x5DF2;&#x6709;&#x7684;&#x96C6;&#x7FA4;&#x3002;&#x56E0;&#x6B64;&#x4E3A;&#x4E86;&#x4ECE;&#x5FEB;&#x7167;&#x542F;&#x52A8;&#x96C6;&#x7FA4;&#xFF0C;&#x6062;&#x590D;&#x5FC5;&#x987B;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x903B;&#x8F91;&#x96C6;&#x7FA4;&#x3002;</p>
+<p>&#x5728;&#x6062;&#x590D;&#x65F6;&#x5FEB;&#x7167;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x68C0;&#x9A8C;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;&#x5982;&#x679C;&#x5FEB;&#x7167;&#x662F;&#x901A;&#x8FC7; <code>etcdctl snapshot save</code> &#x5F97;&#x5230;&#x7684;&#xFF0C;&#x5B83;&#x5C06;&#x6709;&#x4E00;&#x4E2A;&#x88AB; <code>etcdctl snapshot restore</code> &#x68C0;&#x67E5;&#x8FC7;&#x7684;&#x5B8C;&#x6574;&#x6027;hash&#x3002;&#x5982;&#x679C;&#x5FEB;&#x7167;&#x662F;&#x4ECE;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x590D;&#x5236;&#x800C;&#x6765;&#xFF0C;&#x6CA1;&#x6709;&#x5B8C;&#x6574;&#x6027;hash&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>--skip-hash-check</code> &#x6765;&#x6062;&#x590D;&#x3002;</p>
+<p>&#x6062;&#x590D;&#x521D;&#x59CB;&#x5316;&#x65B0;&#x96C6;&#x7FA4;&#x7684;&#x65B0;&#x6210;&#x5458;&#xFF0C;&#x5E26;&#x6709;&#x65B0;&#x7684;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#xFF0C;&#x4F7F;&#x7528; <code>etcd</code> &#x7684;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x6807;&#x8BB0;&#xFF0C;&#x4F46;&#x662F;&#x4FDD;&#x5B58; etcd &#x952E;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x7EE7;&#x7EED;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4E0B;&#x9762;&#x4E3A;&#x4E00;&#x4E2A;3&#x6210;&#x5458;&#x7684;&#x96C6;&#x7FA4;&#x521B;&#x5EFA;&#x65B0;&#x7684; etcd &#x6570;&#x636E;&#x76EE;&#x5F55;(<code>m1.etcd</code>, <code>m2.etcd</code>, <code>m3.etcd</code>):</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># yztestopshadoop63v8yz</span>
+ETCDCTL_API=3 ./etcdctl snapshot restore /data/20190228_091014_snapshot.db \
+  --name yztestopshadoop63v8yz \
+  --initial-cluster yztestopshadoop63v8yz=http://10.21.8.63:2380,yztestopshadoop64v8yz=http://10.21.8.64:2380,yztestopshadoop65v8yz=http://10.21.8.65:2380 \
+  --initial-cluster-token etcd-cluster-1 \
+  --initial-advertise-peer-urls http://10.21.8.63:2380 
+
+<span class="hljs-comment"># yztestopshadoop64v8yz</span>
+ETCDCTL_API=3 ./etcdctl snapshot restore /data/20190228_091014_snapshot.db \
+  --name yztestopshadoop64v8yz \
+  --initial-cluster yztestopshadoop63v8yz=http://10.21.8.63:2380,yztestopshadoop64v8yz=http://10.21.8.64:2380,yztestopshadoop65v8yz=http://10.21.8.65:2380 \
+  --initial-cluster-token etcd-cluster-1 \
+  --initial-advertise-peer-urls http://10.21.8.64:2380 
+
+<span class="hljs-comment"># yztestopshadoop65v8yz</span>
+ETCDCTL_API=3 ./etcdctl snapshot restore /data/20190228_091014_snapshot.db \
+  --name yztestopshadoop65v8yz \
+  --initial-cluster yztestopshadoop63v8yz=http://10.21.8.63:2380,yztestopshadoop64v8yz=http://10.21.8.64:2380,yztestopshadoop65v8yz=http://10.21.8.65:2380 \
+  --initial-cluster-token etcd-cluster-1 \
+  --initial-advertise-peer-urls http://10.21.8.65:2380
+</code></pre>
+<p><strong>&#x6570;&#x636E;&#x76EE;&#x5F55;&#x5728;/usr/local/etcd-v3.1.13-linux-amd64/yztestopshadoop65v8yz.etcd</strong></p>
+<p>&#x4E0B;&#x4E00;&#x6B65;, &#x7528;&#x65B0;&#x7684;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x542F;&#x52A8; <code>etcd</code> :</p>
+<pre><code class="lang-bash">./etcd \
+  --name yztestopshadoop63v8yz \
+  --listen-client-urls http://10.21.8.63:2379 \
+  --advertise-client-urls http://10.21.8.63:2379 \
+  --listen-peer-urls http://10.21.8.63:2380 &amp;
+
+./etcd \
+  --name yztestopshadoop64v8yz \
+  --listen-client-urls http://10.21.8.64:2379 \
+  --advertise-client-urls http://10.21.8.64:2379 \
+  --listen-peer-urls http://10.21.8.64:2380 &amp;
+
+./etcd \
+  --name yztestopshadoop65v8yz \
+  --listen-client-urls http://10.21.8.65:2379 \
+  --advertise-client-urls http://10.21.8.65:2379 \
+  --listen-peer-urls http://10.21.8.65:2380 &amp;
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x6062;&#x590D;&#x96C6;&#x7FA4;&#x72B6;&#x6001;">&#x67E5;&#x770B;&#x6062;&#x590D;&#x96C6;&#x7FA4;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># ETCDCTL_API=3 ./etcdctl --endpoints &quot;http://10.21.8.63:2379,http://10.21.8.64:2379,http://10.21.8.65:2379&quot;  member list </span>
+1332d5f408b3aafe, started, yztestopshadoop63v8yz, http://10.21.8.63:2380, http://10.21.8.63:2379
+73fd04b3f0619f14, started, yztestopshadoop65v8yz, http://10.21.8.65:2380, http://10.21.8.65:2379
+7f9139c640b1b323, started, yztestopshadoop64v8yz, http://10.21.8.64:2380, http://10.21.8.64:2379
+
+
+
+<span class="hljs-comment"># ETCDCTL_API=3 ./etcdctl --endpoints &quot;http://10.21.8.63:2379,http://10.21.8.64:2379,http://10.21.8.65:2379&quot;   endpoint status --write-out=table</span>
++------------------------+------------------+---------+---------+-----------+-----------+------------+
+|        ENDPOINT        |        ID        | VERSION | DB SIZE | IS LEADER | RAFT TERM | RAFT INDEX |
++------------------------+------------------+---------+---------+-----------+-----------+------------+
+| http://10.21.8.63:2379 | 1332d5f408b3aafe | 3.1.13  | 60 MB   | <span class="hljs-literal">true</span>      |         9 |         13 |
+| http://10.21.8.64:2379 | 7f9139c640b1b323 | 3.1.13  | 60 MB   | <span class="hljs-literal">false</span>     |         9 |         13 |
+| http://10.21.8.65:2379 | 73fd04b3f0619f14 | 3.1.13  | 60 MB   | <span class="hljs-literal">false</span>     |         9 |         13 |
++------------------------+------------------+---------+---------+-----------+-----------+------------+
+
+
+
+<span class="hljs-comment"># ETCDCTL_API=3 ./etcdctl --endpoints &quot;http://10.21.8.63:2379,http://10.21.8.64:2379,http://10.21.8.65:2379&quot;   get / --prefix --keys-only</span>
+/calico/ipam/v2/assignment/ipv4/block/10.244.1.128-26
+
+/calico/ipam/v2/assignment/ipv4/block/10.244.1.192-26
+
+/calico/ipam/v2/assignment/ipv4/block/10.244.163.128-26
+
+/calico/ipam/v2/assignment/ipv4/block/10.244.191.192-26
+
+/calico/ipam/v2/assignment/ipv4/block/10.244.237.192-26
+</code></pre>
+<p><strong>TODO</strong>   &#x4F7F;&#x7528;&#x8BC1;&#x4E66;</p>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<p><a href="https://www.xgame.io/?p=106" target="_blank">etcd &#x5BFC;&#x5165;&#x5BFC;&#x51FA;&#x5907;&#x4EFD;</a></p>
+<p><a href="https://www.maideliang.com/index.php/archives/25/" target="_blank">etcd&#x96C6;&#x7FA4;&#x5907;&#x4EFD;&#x548C;&#x6570;&#x636E;&#x6062;&#x590D;&#x4EE5;&#x53CA;&#x4F18;&#x5316;&#x8FD0;&#x7EF4;</a></p>
+<p><a href="https://github.com/etcd-io/etcd/blob/master/Documentation/op-guide/recovery.md" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<p><a href="https://sealyun.com/post/etcd-manage/" target="_blank">etcd&#x7BA1;&#x7406;&#x6307;&#x5357;</a></p>
+<p><a href="https://xigang.github.io/2018/08/18/etcd-back/" target="_blank">Etcd&#x96C6;&#x7FA4;&#x5907;&#x4EFD;&#x53CA;&#x5BB9;&#x707E;&#x6062;&#x590D;</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzA4MzIwNTc4NQ==&amp;mid=2247484108&amp;idx=1&amp;sn=9852f8a55ea1f494a2c3caeb7a6655b2&amp;chksm=9ffb493aa88cc02c797611cf5a33246f7705287ac47dbd280a637e13c9e197310755d3adc44b&amp;mpshare=1&amp;scene=23&amp;srcid=&amp;sharer_sharetime=1578439555668&amp;sharer_shareid=85ecb9201cba173f8c63eaf47b0c5559#rd" target="_blank">Etcd v3&#x5907;&#x4EFD;&#x4E0E;&#x6062;&#x590D;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="etcd-cmd.html" class="navigation navigation-prev " aria-label="Previous page: etcd常用命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../4.md" class="navigation navigation-next " aria-label="Next page: TODO">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"etcd备份恢复","level":"1.9.3","depth":2,"next":{"title":"TODO","level":"1.10","depth":1,"path":"chapters/4.md","ref":"chapters/4.md","articles":[]},"previous":{"title":"etcd常用命令","level":"1.9.2","depth":2,"path":"chapters/etcd/etcd-cmd.md","ref":"chapters/etcd/etcd-cmd.md","articles":[]},"dir":"ltr"},"config":{"plugins":["lunr","pageview-count","code","expandable-chapters","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"pageview-count":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper"],"douban":true,"facebook":true,"weibo":false,"instapaper":false,"twitter":true,"vk":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"llussy <usanfeng@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kubernetes GitBook","gitbook":"*","description":"study kubernetes notes created by gitbook"},"file":{"path":"chapters/etcd/etcd-backup-recover.md","mtime":"2020-07-26T07:56:08.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-26T08:08:15.618Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

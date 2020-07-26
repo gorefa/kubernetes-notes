@@ -1,0 +1,1134 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>prometheus · Kubernetes GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="llussy <usanfeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="query.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../docker/docker.html">
+            
+                <a href="../docker/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../docker/dockerfile.html">
+            
+                <a href="../docker/dockerfile.html">
+            
+                    
+                    dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../docker/dockertls.html">
+            
+                <a href="../docker/dockertls.html">
+            
+                    
+                    docker-tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../docker/harbor.html">
+            
+                <a href="../docker/harbor.html">
+            
+                    
+                    harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                     kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../kubernetes/component.html">
+            
+                <a href="../kubernetes/component.html">
+            
+                    
+                    kubernetes component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../kubernetes/concept.html">
+            
+                <a href="../kubernetes/concept.html">
+            
+                    
+                    concept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../kubernetes/port.html">
+            
+                <a href="../kubernetes/port.html">
+            
+                    
+                    相关端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../kubernetes/certs.html">
+            
+                <a href="../kubernetes/certs.html">
+            
+                    
+                    certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../kubernetes/services.html">
+            
+                <a href="../kubernetes/services.html">
+            
+                    
+                    services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../kubernetes/probe.html">
+            
+                <a href="../kubernetes/probe.html">
+            
+                    
+                    liveness和readiness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../kubernetes/statefuleset.md">
+            
+                <span>
+            
+                    
+                    statefulset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    prometheus
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="prometheus.html">
+            
+                <a href="prometheus.html">
+            
+                    
+                    prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="query.html">
+            
+                <a href="query.html">
+            
+                    
+                    query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="metrics.html">
+            
+                <a href="metrics.html">
+            
+                    
+                    metrics类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="job.md">
+            
+                <span>
+            
+                    
+                    job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="pushgateway.html">
+            
+                <a href="pushgateway.html">
+            
+                    
+                    pushgateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="consul.html">
+            
+                <a href="consul.html">
+            
+                    
+                    结合consul
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    log
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../log/elk.html">
+            
+                <a href="../log/elk.html">
+            
+                    
+                    elk日志收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../log/loki.html">
+            
+                <a href="../log/loki.html">
+            
+                    
+                    loki
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    storage
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    helm
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    ingress
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    etcd
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../etcd/etcd-install.html">
+            
+                <a href="../etcd/etcd-install.html">
+            
+                    
+                    etcd安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../etcd/etcd-cmd.html">
+            
+                <a href="../etcd/etcd-cmd.html">
+            
+                    
+                    etcd常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../etcd/etcd-backup-recover.html">
+            
+                <a href="../etcd/etcd-backup-recover.html">
+            
+                    
+                    etcd备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../4.md">
+            
+                <span>
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >prometheus</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="prometheus&#x7684;&#x57FA;&#x672C;&#x67B6;&#x6784;">Prometheus&#x7684;&#x57FA;&#x672C;&#x67B6;&#x6784;</h3>
+<p>Prometheus&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5B8C;&#x6574;&#x76D1;&#x63A7;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x6DB5;&#x76D6;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x544A;&#x8B66;&#x3001;&#x5C55;&#x793A;&#x6574;&#x4E2A;&#x76D1;&#x63A7;&#x6D41;&#x7A0B;&#xFF0C;&#x4E0B;&#x56FE;&#x662F;Prometheus&#x7684;&#x67B6;&#x6784;&#x56FE;&#xFF1A;</p>
+<p><img src="https://llussy.github.io/images/image-20190420111631110.png" alt="image-20190420111631110"></p>
+<h4 id="prometheus-server">Prometheus Server</h4>
+<p>Prometheus Server&#x662F;Prometheus&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#xFF0C;&#x8D1F;&#x8D23;&#x5B9E;&#x73B0;&#x5BF9;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x7684;&#x83B7;&#x53D6;&#xFF0C;&#x5B58;&#x50A8;&#x4EE5;&#x53CA;&#x67E5;&#x8BE2;&#x3002; Prometheus Server&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&#x9759;&#x6001;&#x914D;&#x7F6E;</code>&#x7BA1;&#x7406;<code>&#x76D1;&#x63A7;&#x76EE;&#x6807;</code>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x5408;&#x4F7F;&#x7528;Service Discovery&#x7684;&#x65B9;&#x5F0F;&#x52A8;&#x6001;&#x7BA1;&#x7406;&#x76D1;&#x63A7;&#x76EE;&#x6807;&#xFF0C;&#x5E76;&#x4ECE;&#x8FD9;&#x4E9B;&#x76D1;&#x63A7;&#x76EE;&#x6807;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3002;&#x5176;&#x6B21;Prometheus Server&#x9700;&#x8981;&#x5BF9;&#x91C7;&#x96C6;&#x5230;&#x7684;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;Prometheus Server&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x65F6;&#x5E8F;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5C06;&#x91C7;&#x96C6;&#x5230;&#x7684;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x6309;&#x7167;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#x78C1;&#x76D8;&#x5F53;&#x4E2D;&#x3002;&#x6700;&#x540E;Prometheus Server&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x7684;PromQL&#x8BED;&#x8A00;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x67E5;&#x8BE2;&#x4EE5;&#x53CA;&#x5206;&#x6790;&#x3002;</p>
+<p>Prometheus Server&#x5185;&#x7F6E;&#x7684;Express Browser UI&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;UI&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;PromQL&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x67E5;&#x8BE2;&#x4EE5;&#x53CA;&#x53EF;&#x89C6;&#x5316;&#x3002;</p>
+<p>Prometheus Server&#x7684;&#x8054;&#x90A6;&#x96C6;&#x7FA4;&#x80FD;&#x529B;&#x53EF;&#x4EE5;&#x4F7F;&#x5176;&#x4ECE;&#x5176;&#x4ED6;&#x7684;Prometheus Server&#x5B9E;&#x4F8B;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x5927;&#x89C4;&#x6A21;&#x76D1;&#x63A7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8054;&#x90A6;&#x96C6;&#x7FA4;&#x4EE5;&#x53CA;&#x529F;&#x80FD;&#x5206;&#x533A;&#x7684;&#x65B9;&#x5F0F;&#x5BF9;Prometheus Server&#x8FDB;&#x884C;&#x6269;&#x5C55;&#x3002;</p>
+<h4 id="exporters">Exporters</h4>
+<p>Exporter&#x5C06;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x7684;&#x7AEF;&#x70B9;&#x901A;&#x8FC7;HTTP&#x670D;&#x52A1;&#x7684;&#x5F62;&#x5F0F;&#x66B4;&#x9732;&#x7ED9;Prometheus Server&#xFF0C;Prometheus Server&#x901A;&#x8FC7;&#x8BBF;&#x95EE;&#x8BE5;Exporter&#x63D0;&#x4F9B;&#x7684;Endpoint&#x7AEF;&#x70B9;&#xFF0C;&#x5373;&#x53EF;&#x83B7;&#x53D6;&#x5230;&#x9700;&#x8981;&#x91C7;&#x96C6;&#x7684;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x53EF;&#x4EE5;&#x5C06;Exporter&#x5206;&#x4E3A;2&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x91C7;&#x96C6;&#xFF1A;&#x8FD9;&#x4E00;&#x7C7B;Exporter&#x76F4;&#x63A5;&#x5185;&#x7F6E;&#x4E86;&#x5BF9;Prometheus&#x76D1;&#x63A7;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x6BD4;&#x5982;cAdvisor&#xFF0C;Kubernetes&#xFF0C;Etcd&#xFF0C;Gokit&#x7B49;&#xFF0C;&#x90FD;&#x76F4;&#x63A5;&#x5185;&#x7F6E;&#x4E86;&#x7528;&#x4E8E;&#x5411;Prometheus&#x66B4;&#x9732;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x7684;&#x7AEF;&#x70B9;&#x3002;</li>
+<li>&#x95F4;&#x63A5;&#x91C7;&#x96C6;&#xFF1A;&#x95F4;&#x63A5;&#x91C7;&#x96C6;&#xFF0C;&#x539F;&#x6709;&#x76D1;&#x63A7;&#x76EE;&#x6807;&#x5E76;&#x4E0D;&#x76F4;&#x63A5;&#x652F;&#x6301;Prometheus&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7;Prometheus&#x63D0;&#x4F9B;&#x7684;Client Library&#x7F16;&#x5199;&#x8BE5;&#x76D1;&#x63A7;&#x76EE;&#x6807;&#x7684;&#x76D1;&#x63A7;&#x91C7;&#x96C6;&#x7A0B;&#x5E8F;&#x3002;&#x4F8B;&#x5982;&#xFF1A; Mysql Exporter&#xFF0C;JMX Exporter&#xFF0C;Consul Exporter&#x7B49;&#x3002;</li>
+</ul>
+<h4 id="alertmanager">AlertManager</h4>
+<p>&#x5728;Prometheus Server&#x4E2D;&#x652F;&#x6301;&#x57FA;&#x4E8E;PromQL&#x521B;&#x5EFA;&#x544A;&#x8B66;&#x89C4;&#x5219;&#xFF0C;&#x5982;&#x679C;&#x6EE1;&#x8DB3;PromQL&#x5B9A;&#x4E49;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x5219;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x6761;&#x544A;&#x8B66;&#xFF0C;&#x800C;&#x544A;&#x8B66;&#x7684;&#x540E;&#x7EED;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x5219;&#x7531;AlertManager&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;&#x5728;AlertManager&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E0E;&#x90AE;&#x4EF6;&#xFF0C;Slack&#x7B49;&#x7B49;&#x5185;&#x7F6E;&#x7684;&#x901A;&#x77E5;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x96C6;&#x6210;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Webhook&#x81EA;&#x5B9A;&#x4E49;&#x544A;&#x8B66;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;AlertManager&#x5373;Prometheus&#x4F53;&#x7CFB;&#x4E2D;&#x7684;&#x544A;&#x8B66;&#x5904;&#x7406;&#x4E2D;&#x5FC3;&#x3002;</p>
+<h4 id="pushgateway">PushGateway</h4>
+<p>&#x7531;&#x4E8E;Prometheus&#x6570;&#x636E;&#x91C7;&#x96C6;&#x57FA;&#x4E8E;Pull&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x7684;&#x914D;&#x7F6E;&#x4E0A;&#x5FC5;&#x987B;&#x8981;&#x8BA9;Prometheus Server&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x4E0E;Exporter&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x3002; &#x5F53;&#x8FD9;&#x79CD;&#x7F51;&#x7EDC;&#x9700;&#x6C42;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;PushGateway&#x6765;&#x8FDB;&#x884C;&#x4E2D;&#x8F6C;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;PushGateway&#x5C06;&#x5185;&#x90E8;&#x7F51;&#x7EDC;&#x7684;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x4E3B;&#x52A8;Push&#x5230;Gateway&#x5F53;&#x4E2D;&#x3002;&#x800C;Prometheus Server&#x5219;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x540C;&#x6837;Pull&#x7684;&#x65B9;&#x5F0F;&#x4ECE;PushGateway&#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="prometheus&#x914D;&#x7F6E;&#x6587;&#x4EF6;">prometheus&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<pre><code class="lang-toml"># Prometheus&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x9879;
+global:
+  scrape_interval:     15s # &#x8BBE;&#x5B9A;&#x6293;&#x53D6;&#x6570;&#x636E;&#x7684;&#x5468;&#x671F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1min
+  evaluation_interval: 15s # &#x8BBE;&#x5B9A;&#x66F4;&#x65B0;rules&#x6587;&#x4EF6;&#x7684;&#x5468;&#x671F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1min
+  scrape_timeout: 15s # &#x8BBE;&#x5B9A;&#x6293;&#x53D6;&#x6570;&#x636E;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;10s
+  external_labels: # &#x989D;&#x5916;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4F1A;&#x6DFB;&#x52A0;&#x5230;&#x62C9;&#x53D6;&#x5F97;&#x6570;&#x636E;&#x5E76;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;
+   monitor: &apos;codelab_monitor&apos;
+
+# Alertmanager&#x914D;&#x7F6E;
+alerting:
+ alertmanagers:
+ - static_configs:
+   - targets: [&quot;localhost:9093&quot;] # &#x8BBE;&#x5B9A;alertmanager&#x548C;prometheus&#x4EA4;&#x4E92;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5373;alertmanager&#x76D1;&#x542C;&#x7684;ip&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;
+
+# rule&#x914D;&#x7F6E;&#xFF0C;&#x9996;&#x6B21;&#x8BFB;&#x53D6;&#x9ED8;&#x8BA4;&#x52A0;&#x8F7D;&#xFF0C;&#x4E4B;&#x540E;&#x6839;&#x636E;evaluation_interval&#x8BBE;&#x5B9A;&#x7684;&#x5468;&#x671F;&#x52A0;&#x8F7D;
+rule_files:
+ - &quot;alertmanager_rules.yml&quot;
+ - &quot;prometheus_rules.yml&quot;
+
+# scape&#x914D;&#x7F6E;
+scrape_configs:
+- job_name: &apos;prometheus&apos; # job_name&#x9ED8;&#x8BA4;&#x5199;&#x5165;timeseries&#x7684;labels&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x67E5;&#x8BE2;&#x4F7F;&#x7528;
+  scrape_interval: 15s # &#x6293;&#x53D6;&#x5468;&#x671F;&#xFF0C;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;global&#x914D;&#x7F6E;
+  static_configs: # &#x9759;&#x6001;&#x914D;&#x7F6E;
+  - targets: [&apos;localdns:9090&apos;] # prometheus&#x6240;&#x8981;&#x6293;&#x53D6;&#x6570;&#x636E;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5373;instance&#x5B9E;&#x4F8B;&#x9879;
+
+- job_name: &apos;example-random&apos;
+  static_configs:
+  - targets: [&apos;localhost:8080&apos;]
+</code></pre>
+<h3 id="prometheus&#x62A5;&#x8B66;">Prometheus&#x62A5;&#x8B66;</h3>
+<p>promethus&#x7684;&#x544A;&#x8B66;&#x88AB;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7;&#x5728;Prometheus&#x4E2D;&#x5B9A;&#x4E49;&#x544A;&#x8B66;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x89C4;&#x5219;&#xFF0C;&#x5E76;&#x5411;Alertmanager&#x53D1;&#x9001;&#x544A;&#x8B66;&#x4FE1;&#x606F;</li>
+<li>Alertmanager&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x8D1F;&#x8D23;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;&#x6765;&#x81EA;Prometheus&#x7684;&#x544A;&#x8B66;&#x4FE1;&#x606F;</li>
+</ol>
+<p>&#x5728;Prometheus&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;<code>prometheus.yml</code>&#x901A;&#x8FC7;<code>rule_files</code>&#x6307;&#x5B9A;&#x4E00;&#x7EC4;&#x544A;&#x8B66;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x7684;&#x8BBF;&#x95EE;&#x8DEF;&#x5F84;&#x3002;Prometheus&#x542F;&#x52A8;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x626B;&#x63CF;&#x8FD9;&#x4E9B;&#x8DEF;&#x5F84;&#x4E0B;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#x8BA1;&#x7B97;&#x662F;&#x5426;&#x5411;&#x5916;&#x90E8;&#x53D1;&#x9001;&#x901A;&#x77E5;</p>
+<h3 id="prometheus-operator">Prometheus-Operator</h3>
+<h4 id="&#x67B6;&#x6784;">&#x67B6;&#x6784;</h4>
+<p><img src="https://llussy.github.io/images/prometheus-operator.png" alt="promtheus opeator"></p>
+<p>&#x4E0A;&#x56FE;&#x662F;<code>Prometheus-Operator</code>&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x67B6;&#x6784;&#x56FE;&#xFF0C;&#x5176;&#x4E2D;<code>Operator</code>&#x662F;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4ED6;&#x4F1A;&#x53BB;&#x521B;&#x5EFA;<code>Prometheus</code>&#x3001;<code>ServiceMonitor</code>&#x3001;<code>AlertManager</code>&#x4EE5;&#x53CA;<code>PrometheusRule</code>4&#x4E2A;<code>CRD</code>&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x4E00;&#x76F4;&#x76D1;&#x63A7;&#x5E76;&#x7EF4;&#x6301;&#x8FD9;4&#x4E2A;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#x521B;&#x5EFA;&#x7684;<code>prometheus</code>&#x8FD9;&#x79CD;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x4F5C;&#x4E3A;<code>Prometheus Server</code>&#x5B58;&#x5728;&#xFF0C;&#x800C;<code>ServiceMonitor</code>&#x5C31;&#x662F;<code>exporter</code>&#x7684;&#x5404;&#x79CD;&#x62BD;&#x8C61;&#xFF0C;<code>exporter</code>&#x524D;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B66;&#x4E60;&#x4E86;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x63D0;&#x4F9B;&#x4E13;&#x95E8;&#x63D0;&#x4F9B;<code>metrics</code>&#x6570;&#x636E;&#x63A5;&#x53E3;&#x7684;&#x5DE5;&#x5177;&#xFF0C;<code>Prometheus</code>&#x5C31;&#x662F;&#x901A;&#x8FC7;<code>ServiceMonitor</code>&#x63D0;&#x4F9B;&#x7684;<code>metrics</code>&#x6570;&#x636E;&#x63A5;&#x53E3;&#x53BB; pull &#x6570;&#x636E;&#x7684;&#xFF0C;&#x5F53;&#x7136;<code>alertmanager</code>&#x8FD9;&#x79CD;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x7684;<code>AlertManager</code>&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x800C;<code>PrometheusRule</code>&#x662F;&#x7528;&#x6765;&#x88AB;<code>Prometheus</code>&#x5B9E;&#x4F8B;&#x4F7F;&#x7528;&#x7684;&#x62A5;&#x8B66;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x8981;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x76D1;&#x63A7;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x76F4;&#x63A5;&#x53BB;&#x64CD;&#x4F5C; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x4E86;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x65B9;&#x4FBF;&#x5F88;&#x591A;&#x4E86;&#x3002;&#x4E0A;&#x56FE;&#x4E2D;&#x7684; Service &#x548C; ServiceMonitor &#x90FD;&#x662F; Kubernetes &#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4E00;&#x4E2A; ServiceMonitor &#x53EF;&#x4EE5;&#x901A;&#x8FC7; labelSelector &#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x5339;&#x914D;&#x4E00;&#x7C7B; Service&#xFF0C;Prometheus &#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; labelSelector &#x53BB;&#x5339;&#x914D;&#x591A;&#x4E2A;ServiceMonitor&#x3002;</p>
+<h4 id="customresourcedefinitions">CustomResourceDefinitions</h4>
+<p>The Operator acts on the following <a href="https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/" target="_blank">custom resource definitions (CRDs)</a>:</p>
+<ul>
+<li><strong>Prometheus</strong>, which defines a desired Prometheus deployment. The Operator ensures at all times that a deployment matching the resource definition is running.</li>
+<li><strong>ServiceMonitor</strong>, which declaratively specifies how groups of services should be monitored. The Operator automatically generates Prometheus scrape configuration based on the definition.</li>
+<li><strong>PrometheusRule</strong>, which defines a desired Prometheus rule file, which can be loaded by a Prometheus instance containing Prometheus alerting and recording rules.</li>
+<li><strong>Alertmanager</strong>, which defines a desired Alertmanager deployment. The Operator ensures at all times that a deployment matching the resource definition is running.</li>
+</ul>
+<p>To learn more about the CRDs introduced by the Prometheus Operator have a look at the <a href="https://github.com/coreos/prometheus-operator/blob/master/Documentation/design.md" target="_blank">design doc</a>.</p>
+<h3 id="prometheus-operator&#x90E8;&#x7F72;">Prometheus-Operator&#x90E8;&#x7F72;</h3>
+<p><a href="https://github.com/coreos/prometheus-operator" target="_blank">github</a></p>
+<h4 id="&#x641C;&#x7D22;&#x6700;&#x65B0;&#x5305;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;">&#x641C;&#x7D22;&#x6700;&#x65B0;&#x5305;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x641C;&#x7D22;</span>
+helm search prometheus-operator
+NAME                            CHART VERSION   APP VERSION     DESCRIPTION                                                 
+stable/prometheus-operator      5.0.7           0.29.0          Provides easy monitoring definitions <span class="hljs-keyword">for</span> Kubernetes servi...
+<span class="hljs-comment"># &#x62C9;&#x53D6;&#x5230;&#x672C;&#x5730;</span>
+helm fetch prometheus-operator
+</code></pre>
+<h4 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;</span>
+helm install <span class="hljs-_">-f</span> ./prometheus-operator/values.yaml --name prometheus-operator --namespace=monitoring ./prometheus-operator
+<span class="hljs-comment"># &#x66F4;&#x65B0;</span>
+helm upgrade <span class="hljs-_">-f</span> prometheus-operator/values.yaml prometheus-operator ./prometheus-operator
+</code></pre>
+<h4 id="&#x5378;&#x8F7D;prometheus-operator">&#x5378;&#x8F7D;prometheus-operator</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># helm delete</span>
+helm delete prometheus-operator --purge
+<span class="hljs-comment"># &#x5220;&#x9664;crd</span>
+kubectl delete customresourcedefinitions prometheuses.monitoring.coreos.com prometheusrules.monitoring.coreos.com servicemonitors.monitoring.coreos.com alertmanagers.monitoring.coreos.com
+</code></pre>
+<h4 id="&#x914D;&#x7F6E;operator">&#x914D;&#x7F6E;operator</h4>
+<h5 id="mail">mail</h5>
+<pre><code class="lang-bash">  config:
+    global:
+      resolve_timeout: 5m
+      smtp_smarthost: <span class="hljs-string">&apos;mail.163.com:25&apos;</span>
+      smtp_from: <span class="hljs-string">&apos;llussy@163.com&apos;</span>
+      smtp_auth_username: <span class="hljs-string">&apos;llussy&apos;</span>
+      smtp_auth_password: <span class="hljs-string">&apos;password&apos;</span>
+      smtp_require_tls: <span class="hljs-literal">false</span>
+     <span class="hljs-comment"># slack_api_url: &apos;&lt;slack_api_url&gt;&apos;</span>
+    templates:
+    - <span class="hljs-string">&apos;/etc/alertmanager/config/*.tmpl&apos;</span>
+    route:
+      group_by: [<span class="hljs-string">&apos;job&apos;</span>]
+      group_wait: 30s
+      group_interval: 5m
+      repeat_interval: 5m
+      receiver: <span class="hljs-string">&apos;default-receiver&apos;</span>
+      routes:
+      - receiver: loki-app1
+        match:
+          namespace: loki
+          app: app1
+    receivers:
+    - name: <span class="hljs-string">&apos;default-receiver&apos;</span>
+      email_configs:
+      - to: <span class="hljs-string">&apos;15100499406@163.com&apos;</span>
+    - name: <span class="hljs-string">&apos;loki-app1&apos;</span>
+      email_configs:
+      - to: <span class="hljs-string">&apos;297022664@qq.com,1299310393@qq.com&apos;</span>
+</code></pre>
+<h5 id="&#x6301;&#x4E45;&#x5316;">&#x6301;&#x4E45;&#x5316;</h5>
+<pre><code class="lang-bash">    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: ceph-rbd
+          accessModes: [<span class="hljs-string">&quot;ReadWriteOnce&quot;</span>]
+          resources:
+            requests:
+              storage: 5Gi
+</code></pre>
+<h5 id="&#x6392;&#x67E5;kubelet&#x91CD;&#x590D;&#x6570;&#x636E;">&#x6392;&#x67E5;kubelet&#x91CD;&#x590D;&#x6570;&#x636E;</h5>
+<p>drop&#x6389;&#x91CD;&#x6570;&#x636E;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">kubelet:</span>
+<span class="hljs-attr">  enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  namespace:</span> kube-system
+
+<span class="hljs-attr">  serviceMonitor:</span>
+    <span class="hljs-comment">## Enable scraping the kubelet over https. For requirements to enable this see</span>
+    <span class="hljs-comment">## https://github.com/coreos/prometheus-operator/issues/926</span>
+    <span class="hljs-comment">##</span>
+<span class="hljs-attr">    https:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    cAdvisorMetricRelabelings:</span>
+<span class="hljs-attr">      - sourceLabels:</span> [__name__, image]
+<span class="hljs-attr">        separator:</span> ;
+<span class="hljs-attr">        regex:</span> container_([a-z_]+);
+<span class="hljs-attr">        replacement:</span> $<span class="hljs-number">1</span>
+<span class="hljs-attr">        action:</span> drop
+<span class="hljs-attr">      - sourceLabels:</span> [__name__]
+<span class="hljs-attr">        separator:</span> ;
+<span class="hljs-attr">        regex:</span> container_(network_tcp_usage_total|network_udp_usage_total|tasks_state|cpu_load_average_10s)
+<span class="hljs-attr">        replacement:</span> $<span class="hljs-number">1</span>
+<span class="hljs-attr">        action:</span> drop
+</code></pre>
+<h4 id="&#x670D;&#x52A1;&#x53D1;&#x73B0;">&#x670D;&#x52A1;&#x53D1;&#x73B0;</h4>
+<p><strong>&#x6D4B;&#x8BD5;Service/Pod&#x7684;metrics&#x65F6;,&#x53D1;&#x73B0;metrics&#x4FE1;&#x606F;&#x5E76;&#x4E0D;&#x80FD;&#x88AB;prometheus-operator&#x81EA;&#x52A8;&#x6536;&#x96C6;&#x5230;&#xFF0C;&#x4E4B;&#x524D;&#x7684;prometheus&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</strong></p>
+<pre><code>prometheus-operator&#x6CA1;&#x6709;&#x5F00;&#x542F;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x81EA;&#x52A8;&#x76D1;&#x63A7;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;prometheus-operator&#x83B7;&#x53D6;Service/Pod&#x7684;metrics&#x4FE1;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x521B;&#x5EFA;&#x76F8;&#x5E94;&#x7684;ServiceMonitor&#x5BF9;&#x8C61;&#x3002;
+</code></pre><p>(ServiceMonitor&#x662F;Prometheus Operator&#x4E2D;&#x62BD;&#x8C61;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4ED6;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x8BA9;&#x914D;&#x7F6E;Prometheus&#x91C7;&#x96C6;Target&#x7684;&#x914D;&#x7F6E;&#x53D8;&#x5316;&#x6210;&#x52A8;&#x6001;&#x53D1;&#x73B0;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;ServiceMonitor&#x901A;&#x8FC7;Deployment&#x5BF9;&#x5E94;&#x7684;Service&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x6302;&#x94A9;&#xFF0C;&#x901A;&#x8FC7;label selector&#x9009;&#x62E9;Service&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x540E;&#x7AEF;&#x5BB9;&#x5668;&#x3002;)</p>
+<p><strong>&#x4E00;&#x4E2A;ServiceMonitor&#x4F8B;&#x5B50;</strong> <a href="https://www.twblogs.net/a/5c7dffcebd9eee35cd68ec81" target="_blank">&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x8BF7;&#x70B9;&#x51FB;</a></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> monitoring.coreos.com/v1
+<span class="hljs-attr">kind:</span> ServiceMonitor
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> nginx-demo
+<span class="hljs-attr">    release:</span> prometheus-operator
+<span class="hljs-attr">  name:</span> nginx-demo
+<span class="hljs-attr">  namespace:</span> monitoring
+  <span class="hljs-comment">#prometheus&#x7684;namespace</span>
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  endpoints:</span>
+<span class="hljs-attr">  - interval:</span> <span class="hljs-number">15</span>s
+<span class="hljs-attr">    port:</span> http-metrics
+<span class="hljs-attr">  namespaceSelector:</span>
+<span class="hljs-attr">    matchNames:</span>
+<span class="hljs-bullet">    -</span> default
+    <span class="hljs-comment">#nginx demo&#x7684;namespace</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      app:</span> nginx-demo
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x521B;&#x5EFA;ServiceMonitor&#x5BF9;&#x8C61;&#x592A;&#x8FC7;&#x590D;&#x6742;&#xFF0C;&#x4E3A;&#x89E3;&#x51B3;&#x4E0A;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF0C;Prometheus Operator &#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x6293;&#x53D6;&#x914D;&#x7F6E;&#x7684;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x6765;&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x76D1;&#x63A7;&#x3002;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5728; Prometheus Operator &#x5F53;&#x4E2D;&#x53BB;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x5E76;&#x76D1;&#x63A7;&#x5177;&#x6709;<code>prometheus.io/scrape=true</code>&#x8FD9;&#x4E2A; annotations &#x7684; Service&#x3002;&#x9700;&#x8981;&#x4FEE;&#x6539;prometheus-operator&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x7684;prometheus-operator&#x90FD;&#x662F;helm&#x5B89;&#x88C5;&#x7684;&#xFF0C;&#x7F16;&#x8F91;<code>value.yaml</code>&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;<code>additionalScrapeConfigs</code>&#x90E8;&#x5206;&#xFF1A;</p>
+<h5 id="&#x6293;&#x53D6;service-metrics">&#x6293;&#x53D6;service metrics</h5>
+<pre><code class="lang-yaml"><span class="hljs-attr">  additionalScrapeConfigs:</span>
+<span class="hljs-attr">    - job_name:</span> <span class="hljs-string">&apos;kubernetes-service-endpoints&apos;</span>
+<span class="hljs-attr">        kubernetes_sd_configs:</span>
+<span class="hljs-attr">        - role:</span> endpoints
+<span class="hljs-attr">          namespaces:</span>
+<span class="hljs-attr">            names:</span>
+<span class="hljs-bullet">              -</span> kube-system  <span class="hljs-comment">#&#x8FD9;&#x91CC;&#x4F7F;&#x7528;ns&#x8FC7;&#x6EE4;</span>
+<span class="hljs-bullet">              -</span> anfeng-ad-k8s-loda  
+<span class="hljs-attr">        relabel_configs:</span>
+<span class="hljs-attr">        - source_labels:</span> [__meta_kubernetes_service_annotation_prometheus_io_scrape]
+<span class="hljs-attr">          action:</span> keep
+<span class="hljs-attr">          regex:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">        - source_labels:</span> [__meta_kubernetes_service_annotation_prometheus_io_scheme]
+<span class="hljs-attr">          action:</span> replace
+<span class="hljs-attr">          target_label:</span> __scheme__
+<span class="hljs-attr">          regex:</span> (https?)
+<span class="hljs-attr">        - source_labels:</span> [__meta_kubernetes_service_annotation_prometheus_io_path]
+<span class="hljs-attr">          action:</span> replace
+<span class="hljs-attr">          target_label:</span> __metrics_path__
+<span class="hljs-attr">          regex:</span> (.+)
+<span class="hljs-attr">        - source_labels:</span> [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+<span class="hljs-attr">          action:</span> replace
+<span class="hljs-attr">          target_label:</span> __address__
+<span class="hljs-attr">          regex:</span> ([^:]+)(?::\d+)?;(\d+)
+<span class="hljs-attr">          replacement:</span> $<span class="hljs-number">1</span>:$<span class="hljs-number">2</span>
+<span class="hljs-attr">        - action:</span> labelmap
+<span class="hljs-attr">          regex:</span> __meta_kubernetes_service_label_(.+)
+<span class="hljs-attr">        - source_labels:</span> [__meta_kubernetes_namespace]
+<span class="hljs-attr">          action:</span> replace
+<span class="hljs-attr">          target_label:</span> kubernetes_namespace
+<span class="hljs-attr">        - source_labels:</span> [__meta_kubernetes_service_name]
+<span class="hljs-attr">          action:</span> replace
+<span class="hljs-attr">          target_label:</span> kubernetes_name
+</code></pre>
+<h5 id="&#x6293;&#x53D6;pod-metrics">&#x6293;&#x53D6;pod metrics</h5>
+<pre><code class="lang-yaml"><span class="hljs-attr">      - job_name:</span> <span class="hljs-string">&apos;kubernetes-pod&apos;</span>
+<span class="hljs-attr">        kubernetes_sd_configs:</span>
+<span class="hljs-attr">          - role:</span> pod
+<span class="hljs-attr">        relabel_configs:</span>
+<span class="hljs-attr">          - source_labels:</span> [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+<span class="hljs-attr">            action:</span> keep
+<span class="hljs-attr">            regex:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">          - source_labels:</span> [__meta_kubernetes_pod_annotation_prometheus_io_path]
+<span class="hljs-attr">            action:</span> replace
+<span class="hljs-attr">            target_label:</span> __metrics_path__
+<span class="hljs-attr">            regex:</span> (.+)
+<span class="hljs-attr">          - source_labels:</span> [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+<span class="hljs-attr">            action:</span> replace
+<span class="hljs-attr">            regex:</span> ([^:]+)(?::\d+)?;(\d+)
+<span class="hljs-attr">            replacement:</span> $<span class="hljs-number">1</span>:$<span class="hljs-number">2</span>
+<span class="hljs-attr">            target_label:</span> __address__
+<span class="hljs-attr">          - action:</span> labelmap
+<span class="hljs-attr">            regex:</span> __meta_kubernetes_pod_label_(.+)
+<span class="hljs-attr">          - source_labels:</span> [__meta_kubernetes_namespace]
+<span class="hljs-attr">            action:</span> replace
+<span class="hljs-attr">            target_label:</span> kubernetes_namespace
+<span class="hljs-attr">          - source_labels:</span> [__meta_kubernetes_pod_name]
+<span class="hljs-attr">            action:</span> replace
+<span class="hljs-attr">            target_label:</span> kubernetes_pod_name
+</code></pre>
+<h5 id="&#x6293;&#x53D6;etcd-metrics">&#x6293;&#x53D6;etcd metrics</h5>
+<p>&#x5BF9;&#x4E8E; etcd &#x96C6;&#x7FA4;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E3A;&#x4E86;&#x5B89;&#x5168;&#x90FD;&#x4F1A;&#x5F00;&#x542F; https &#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x60F3;&#x8BA9; Prometheus &#x8BBF;&#x95EE;&#x5230; etcd &#x96C6;&#x7FA4;&#x7684;&#x76D1;&#x63A7;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x76F8;&#x5E94;&#x7684;&#x8BC1;&#x4E66;&#x6821;&#x9A8C;&#x3002;</p>
+<p><strong>&#x624B;&#x5DE5;&#x83B7;&#x53D6;</strong></p>
+<pre><code class="lang-bash">curl --cacert /etc/etcd/ssl/etcd-ca.pem --cert /etc/etcd/ssl/etcd.pem --key /etc/etcd/ssl/etcd-key.pem https://10.21.8.24:2379/metrics
+</code></pre>
+<p><strong>operator&#x6293;&#x53D6;</strong></p>
+<p>&#x521B;&#x5EFA;secret</p>
+<pre><code class="lang-bash">kubectl -n monitoring create secret generic etcd-certs  --from-file=/etc/etcd/ssl/etcd-ca.pem --from-file=/etc/etcd/ssl/etcd.pem --from-file=/etc/etcd/ssl/etcd-key.pem
+</code></pre>
+<p>&#x4FEE;&#x6539;value.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">kubeEtcd:</span>
+<span class="hljs-attr">  enabled:</span> <span class="hljs-literal">true</span>
+
+  <span class="hljs-comment">## If your etcd is not deployed as a pod, specify IPs it can be found on</span>
+  <span class="hljs-comment">##</span>
+<span class="hljs-attr">  endpoints:</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-number">10.21</span><span class="hljs-number">.8</span><span class="hljs-number">.24</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-number">10.21</span><span class="hljs-number">.8</span><span class="hljs-number">.25</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-number">10.21</span><span class="hljs-number">.8</span><span class="hljs-number">.26</span>
+
+  <span class="hljs-comment">## Etcd service. If using kubeEtcd.endpoints only the port and targetPort are used</span>
+  <span class="hljs-comment">##</span>
+<span class="hljs-attr">  service:</span>
+<span class="hljs-attr">    port:</span> <span class="hljs-number">2379</span>
+<span class="hljs-attr">    targetPort:</span> <span class="hljs-number">2379</span>
+<span class="hljs-attr">    selector:</span>
+<span class="hljs-attr">      component:</span> etcd
+
+  <span class="hljs-comment">## Configure secure access to the etcd cluster by loading a secret into prometheus and</span>
+  <span class="hljs-comment">## specifying security configuration below. For example, with a secret named etcd-client-cert</span>
+  <span class="hljs-comment">##</span>
+<span class="hljs-attr">  serviceMonitor:</span>
+<span class="hljs-attr">    scheme:</span> https
+<span class="hljs-attr">    insecureSkipVerify:</span> <span class="hljs-literal">false</span>
+    <span class="hljs-comment">#serverName: localhost</span>
+<span class="hljs-attr">    caFile:</span> /etc/prometheus/secrets/etcd-certs/etcd-ca.pem
+<span class="hljs-attr">    certFile:</span> /etc/prometheus/secrets/etcd-certs/etcd.pem
+<span class="hljs-attr">    keyFile:</span> /etc/prometheus/secrets/etcd-certs/etcd-key.pem
+</code></pre>
+<h5 id="&#x6293;&#x53D6;k8s&#x96C6;&#x7FA4;&#x5916;metrics">&#x6293;&#x53D6;k8s&#x96C6;&#x7FA4;&#x5916;metrics</h5>
+<pre><code class="lang-yaml"><span class="hljs-attr">      - job_name:</span> <span class="hljs-string">&apos;external-metrics&apos;</span>
+<span class="hljs-attr">        static_configs:</span>
+<span class="hljs-attr">          - targets:</span> [<span class="hljs-string">&apos;10.21.8.105&apos;</span>]
+<span class="hljs-attr">        metrics_path:</span> <span class="hljs-string">&apos;/metrics&apos;</span>
+</code></pre>
+<h5 id="&#x6293;&#x53D6;servicemonitors">&#x6293;&#x53D6;ServiceMonitors</h5>
+<p>&#x6293;&#x53D6;svc&#x7684;metrics&#x53EF;&#x80FD;&#x548C;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x7684;&#x6709;&#x91CD;&#x590D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6293;&#x53D6;ServiceMonitors&#x6765;&#x83B7;&#x53D6;metrics,&#x4FEE;&#x6539;<code>value.yaml</code>&#x7684;<code>additionalServiceMonitors</code>&#x90E8;&#x5206;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># &#x6293;&#x53D6;&#x5F00;&#x542F;metrics&#x76D1;&#x63A7;&#x7684;&#xFF0C;port&#x540D;&#x5B57;&#x4E3A;k8s-metrics&#x7684;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x3002;</span>
+
+<span class="hljs-attr">additionalServiceMonitors:</span>
+<span class="hljs-attr">  - name:</span> <span class="hljs-string">&quot;k8s-metrics&quot;</span>
+<span class="hljs-attr">    namespaceSelector:</span>
+<span class="hljs-attr">      any:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    endpoints:</span>
+<span class="hljs-attr">      - port:</span> k8s-metrics
+<span class="hljs-attr">        path:</span> /metrics
+<span class="hljs-attr">        scheme:</span> http
+<span class="hljs-attr">        interval:</span> <span class="hljs-number">60</span>s
+<span class="hljs-attr">        honorLabels:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># svc&#x4F8B;&#x5B50;</span>
+<span class="hljs-comment"># kubectl  get svc -n test-k8s-loda  nginx-test-svc  -o yaml                               </span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Service
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  annotations:</span>
+    prometheus.io/port: <span class="hljs-string">&quot;9527&quot;</span>
+    prometheus.io/scrape: <span class="hljs-string">&quot;true&quot;</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    monitor:</span> metrics
+<span class="hljs-attr">  name:</span> nginx-test-svc
+<span class="hljs-attr">  namespace:</span> test-k8s-loda
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  clusterIP:</span> <span class="hljs-number">10.97</span><span class="hljs-number">.140</span><span class="hljs-number">.23</span>
+<span class="hljs-attr">  ports:</span>
+<span class="hljs-attr">  - name:</span> tcp80
+<span class="hljs-attr">    port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">    protocol:</span> TCP
+<span class="hljs-attr">    targetPort:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">  - name:</span> k8s-metrics
+<span class="hljs-attr">    port:</span> <span class="hljs-number">9527</span>
+<span class="hljs-attr">    protocol:</span> TCP
+<span class="hljs-attr">    targetPort:</span> <span class="hljs-number">9527</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    app:</span> nginx-test
+<span class="hljs-attr">    from:</span> deploy
+<span class="hljs-attr">    ns:</span> test-k8s-loda
+<span class="hljs-attr">  sessionAffinity:</span> None
+<span class="hljs-attr">  type:</span> ClusterIP
+<span class="hljs-attr">status:</span>
+<span class="hljs-attr">  loadBalancer:</span> {}
+</code></pre>
+<p><strong>prometheus</strong></p>
+<p><img src="https://llussy.github.io/images/image-20190426105811002.png" alt="image-20190426105811002"></p>
+<h4 id="&#x914D;&#x7F6E;prometheus-operator&#x81EA;&#x5B9A;&#x4E49;&#x62A5;&#x8B66;">&#x914D;&#x7F6E;prometheus-operator&#x81EA;&#x5B9A;&#x4E49;&#x62A5;&#x8B66;</h4>
+<p><strong>PrometheusRule&#x5C31;&#x662F;&#x62A5;&#x8B66;&#x89C4;&#x5219;</strong>
+&#x67E5;&#x770B;<code>prometheuses.monitoring.coreos.com</code>&#x7684;matchLabels&#x90E8;&#x5206;&#xFF0C;&#x4FDD;&#x969C;PrometheusRule labels&#x62E5;&#x6709;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># kubectl -n monitoring get prometheuses.monitoring.coreos.com prometheus-operator-prometheus -o yaml</span>
+<span class="hljs-attr">  ruleSelector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      app:</span> prometheus-operator
+<span class="hljs-attr">      release:</span> prometheus-operator
+</code></pre>
+<p><strong>PrometheusRule</strong>
+label&#x53EF;&#x4EE5;&#x548C;alermanager&#x90AE;&#x4EF6;&#x63A5;&#x6536;&#x90E8;&#x5206;&#x5339;&#x914D;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x62A5;&#x8B66;&#x53D1;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x62A5;&#x8B66;&#x4EBA;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> monitoring.coreos.com/v1
+<span class="hljs-attr">kind:</span> PrometheusRule
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> prometheus-operator<span class="hljs-bullet">-0226</span>-lisai-grafana
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> prometheus-operator
+<span class="hljs-attr">    release:</span> prometheus-operator
+<span class="hljs-attr">  namespace:</span> monitoring
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  groups:</span>
+<span class="hljs-attr">  - name:</span> kubernetes<span class="hljs-bullet">-0226</span>-lisai
+<span class="hljs-attr">    rules:</span>
+<span class="hljs-attr">    - alert:</span> grafana mem
+<span class="hljs-attr">      annotations:</span>
+<span class="hljs-attr">        message:</span> grafana mem big
+<span class="hljs-attr">        runbook_url:</span> https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md<span class="hljs-comment">#alert-name-kubepersistentvolumeusagecritical</span>
+<span class="hljs-attr">      expr:</span> |-
+        sum(container_memory_usage_bytes{namespace=<span class="hljs-string">&quot;loki&quot;</span>,pod_name=~<span class="hljs-string">&quot;loki.*&quot;</span>}) / <span class="hljs-number">1024</span>^<span class="hljs-number">3</span> &gt;  <span class="hljs-number">1</span>
+<span class="hljs-attr">      for:</span> <span class="hljs-number">1</span>m
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        namespace:</span> loki
+<span class="hljs-attr">        app:</span> app1
+<span class="hljs-attr">    - alert:</span> timetimetime
+<span class="hljs-attr">      annotations:</span>
+<span class="hljs-attr">        message:</span> time big
+<span class="hljs-attr">        runbook_url:</span> https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md<span class="hljs-comment">#alert-name-kubepersistentvolumeusagecritical</span>
+<span class="hljs-attr">      generatorURL:</span> <span class="hljs-string">&quot;http://prometheus.test.cloud.idc.com&quot;</span>
+<span class="hljs-attr">      expr:</span> |-
+        sum(container_memory_usage_bytes{namespace=<span class="hljs-string">&quot;monitoring&quot;</span>,pod_name=~<span class="hljs-string">&quot;prometheus.*&quot;</span>}) / <span class="hljs-number">1024</span>^<span class="hljs-number">3</span> &gt;  <span class="hljs-number">10</span>
+<span class="hljs-attr">      for:</span> <span class="hljs-number">1</span>m
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        namespace:</span> monitoring
+<span class="hljs-attr">        app:</span> app2
+<span class="hljs-attr">    - alert:</span> timetimetime
+<span class="hljs-attr">      annotations:</span>
+<span class="hljs-attr">        message:</span> time big
+<span class="hljs-attr">        runbook_url:</span> https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md<span class="hljs-comment">#alert-name-kubepersistentvolumeusagecritical</span>
+<span class="hljs-attr">      generatorURL:</span> <span class="hljs-string">&quot;http://prometheus.test.cloud.idc.com&quot;</span>
+<span class="hljs-attr">      expr:</span> |-
+        sum(container_memory_usage_bytes{namespace=<span class="hljs-string">&quot;monitoring&quot;</span>,pod_name=~<span class="hljs-string">&quot;prometheus.*&quot;</span>}) / <span class="hljs-number">1024</span>^<span class="hljs-number">3</span> &gt;  <span class="hljs-number">10</span>
+<span class="hljs-attr">      for:</span> <span class="hljs-number">1</span>m
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        namespace:</span> monitoring
+<span class="hljs-attr">        app:</span> app2
+</code></pre>
+<h3 id="&#x6536;&#x96C6;prometheus-pushgateway&#x6570;&#x636E;">&#x6536;&#x96C6;prometheus-pushgateway&#x6570;&#x636E;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;</span>
+helm install <span class="hljs-_">-f</span> ./prometheus-pushgateway/values.yaml --name prometheus-pushgateway --namespace=monitoring ./prometheus-pushgateway/
+
+<span class="hljs-comment"># prometheus&#x914D;&#x7F6E;&#x6536;&#x96C6;metrics</span>
+<span class="hljs-comment"># cat servicemonitor.yaml </span>
+{{- <span class="hljs-keyword">if</span> .Values.pushgateway.enabled }}
+apiVersion: {{ <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%s/v1&quot;</span> (.Values.prometheusOperator.crdApiGroup | default <span class="hljs-string">&quot;monitoring.coreos.com&quot;</span>) }}
+kind: ServiceMonitor
+metadata:
+  name: {{ template <span class="hljs-string">&quot;prometheus-operator.fullname&quot;</span> . }}-pushgateway
+  labels:
+    app: {{ template <span class="hljs-string">&quot;prometheus-operator.name&quot;</span> . }}-pushgateway
+{{ include <span class="hljs-string">&quot;prometheus-operator.labels&quot;</span> . | indent 4 }}
+spec:
+  jobLabel: jobLabel
+  selector:
+    matchLabels:
+      app: prometheus-pushgateway
+  namespaceSelector:
+    matchNames:
+      - <span class="hljs-string">&quot;monitoring&quot;</span>
+  endpoints:
+  - port: pushgateway
+    interval: 30s
+    honorLabels: <span class="hljs-literal">true</span>
+    path: /metrics
+    scheme: http
+{{- end }}
+
+
+cat &lt;&lt;EOF | curl --data-binary @- http://pushgateway.ifeng-test.cloud.ifengidc.com/metrics/job/some_job/instance/some_instance
+<span class="hljs-comment"># TYPE some_metric counter</span>
+some_metric{label=<span class="hljs-string">&quot;val1&quot;</span>} 42
+<span class="hljs-comment"># TYPE another_metric gauge</span>
+<span class="hljs-comment"># HELP another_metric Just an example.</span>
+another_metric 2398.283
+EOF
+</code></pre>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<p><a href="https://yunlzheng.gitbook.io/prometheus-book/parti-prometheus-ji-chu/quickstart/prometheus-arch" target="_blank">prometheus&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;</a></p>
+<p><a href="https://www.troyying.xyz/index.php/operate/15.html" target="_blank">Prometheus Operator</a></p>
+<p><a href="https://blog.csdn.net/hxpjava1/article/details/86647217" target="_blank">Prometheus Operator &#x9AD8;&#x7EA7;&#x914D;&#x7F6E; Prometheus Operator &#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;</a></p>
+<p><a href="https://www.qikqiak.com/post/prometheus-operator-monitor-etcd/" target="_blank">Prometheus Operator &#x76D1;&#x63A7; etcd &#x96C6;&#x7FA4;</a></p>
+<p><a href="https://zhangguanzhang.github.io/2018/10/12/prometheus-operator/" target="_blank">&#x5168;&#x624B;&#x52A8;&#x90E8;&#x7F72;prometheus-operator&#x76D1;&#x63A7;K8S&#x96C6;&#x7FA4;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5751;</a></p>
+<p><a href="https://www.twblogs.net/a/5c7dffcebd9eee35cd68ec81" target="_blank">&#x4F7F;&#x7528;Prometheus Operator&#x5BE6;&#x73FE;&#x61C9;&#x7528;&#x81EA;&#x5B9A;&#x7FA9;&#x76E3;&#x63A7;</a></p>
+<p><a href="https://www.qikqiak.com/post/first-use-prometheus-operator/" target="_blank">Prometheus Operator &#x521D;&#x4F53;&#x9A8C;</a></p>
+<p><a href="https://www.cnblogs.com/longcnblogs/p/9620733.html" target="_blank">Prometheus &#x548C; Alertmanager&#x5B9E;&#x6218;&#x914D;&#x7F6E;</a></p>
+<p><a href="http://www.strugglesquirrel.com/2018/06/13/%E4%BD%BF%E7%94%A8alertmanager%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E6%8A%A5%E8%AD%A6/" target="_blank">&#x4F7F;&#x7528;alertmanager&#x5B9E;&#x73B0;&#x5FAE;&#x4FE1;&#x62A5;&#x8B66;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="query.html" class="navigation navigation-next navigation-unique" aria-label="Next page: query">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"prometheus","level":"1.4.1","depth":2,"next":{"title":"query","level":"1.4.2","depth":2,"path":"chapters/prometheus/query.md","ref":"chapters/prometheus/query.md","articles":[]},"previous":{"title":"prometheus","level":"1.4","depth":1,"ref":"","articles":[{"title":"prometheus","level":"1.4.1","depth":2,"path":"chapters/prometheus/prometheus.md","ref":"chapters/prometheus/prometheus.md","articles":[]},{"title":"query","level":"1.4.2","depth":2,"path":"chapters/prometheus/query.md","ref":"chapters/prometheus/query.md","articles":[]},{"title":"metrics类型","level":"1.4.3","depth":2,"path":"chapters/prometheus/metrics.md","ref":"chapters/prometheus/metrics.md","articles":[]},{"title":"job","level":"1.4.4","depth":2,"path":"chapters/prometheus/job.md","ref":"chapters/prometheus/job.md","articles":[]},{"title":"pushgateway","level":"1.4.5","depth":2,"path":"chapters/prometheus/pushgateway.md","ref":"chapters/prometheus/pushgateway.md","articles":[]},{"title":"结合consul","level":"1.4.6","depth":2,"path":"chapters/prometheus/consul.md","ref":"chapters/prometheus/consul.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["lunr","pageview-count","code","expandable-chapters","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"pageview-count":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper"],"douban":true,"facebook":true,"weibo":false,"instapaper":false,"twitter":true,"vk":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"llussy <usanfeng@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kubernetes GitBook","gitbook":"*","description":"study kubernetes notes created by gitbook"},"file":{"path":"chapters/prometheus/prometheus.md","mtime":"2020-07-26T07:56:08.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-26T08:08:15.618Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

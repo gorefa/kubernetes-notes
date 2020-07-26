@@ -1,0 +1,758 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>harbor · Kubernetes GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="llussy <usanfeng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="dockertls.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="dockerfile.html">
+            
+                <a href="dockerfile.html">
+            
+                    
+                    dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dockertls.html">
+            
+                <a href="dockertls.html">
+            
+                    
+                    docker-tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="harbor.html">
+            
+                <a href="harbor.html">
+            
+                    
+                    harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                     kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../kubernetes/component.html">
+            
+                <a href="../kubernetes/component.html">
+            
+                    
+                    kubernetes component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../kubernetes/concept.html">
+            
+                <a href="../kubernetes/concept.html">
+            
+                    
+                    concept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../kubernetes/port.html">
+            
+                <a href="../kubernetes/port.html">
+            
+                    
+                    相关端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../kubernetes/certs.html">
+            
+                <a href="../kubernetes/certs.html">
+            
+                    
+                    certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../kubernetes/services.html">
+            
+                <a href="../kubernetes/services.html">
+            
+                    
+                    services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../kubernetes/probe.html">
+            
+                <a href="../kubernetes/probe.html">
+            
+                    
+                    liveness和readiness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../kubernetes/statefuleset.md">
+            
+                <span>
+            
+                    
+                    statefulset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    prometheus
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../prometheus/prometheus.html">
+            
+                <a href="../prometheus/prometheus.html">
+            
+                    
+                    prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../prometheus/query.html">
+            
+                <a href="../prometheus/query.html">
+            
+                    
+                    query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../prometheus/metrics.html">
+            
+                <a href="../prometheus/metrics.html">
+            
+                    
+                    metrics类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../prometheus/job.md">
+            
+                <span>
+            
+                    
+                    job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../prometheus/pushgateway.html">
+            
+                <a href="../prometheus/pushgateway.html">
+            
+                    
+                    pushgateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../prometheus/consul.html">
+            
+                <a href="../prometheus/consul.html">
+            
+                    
+                    结合consul
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    log
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../log/elk.html">
+            
+                <a href="../log/elk.html">
+            
+                    
+                    elk日志收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../log/loki.html">
+            
+                <a href="../log/loki.html">
+            
+                    
+                    loki
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    storage
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    helm
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    ingress
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    etcd
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../etcd/etcd-install.html">
+            
+                <a href="../etcd/etcd-install.html">
+            
+                    
+                    etcd安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../etcd/etcd-cmd.html">
+            
+                <a href="../etcd/etcd-cmd.html">
+            
+                    
+                    etcd常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../etcd/etcd-backup-recover.html">
+            
+                <a href="../etcd/etcd-backup-recover.html">
+            
+                    
+                    etcd备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../4.md">
+            
+                <span>
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >harbor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="docker&#x5B89;&#x88C5;">docker&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /data/soft/packs
+wget http://10.21.8.20/k8s/docker-ce-18.09.2-3.el7.x86_64.rpm
+wget http://10.21.8.20/k8s/docker-ce-cli-18.09.2-3.el7.x86_64.rpm
+wget http://10.21.8.20/k8s/containerd.io-1.2.2-3.3.el7.x86_64.rpm
+yum install *.rpm -y
+
+mkdir /etc/docker
+cat &gt; /etc/docker/daemon.json &lt;&lt; EOF
+{
+  <span class="hljs-string">&quot;exec-opts&quot;</span>: [<span class="hljs-string">&quot;native.cgroupdriver=systemd&quot;</span>],
+  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<span class="hljs-string">&quot;https://fz5yth0r.mirror.aliyuncs.com&quot;</span>],
+  <span class="hljs-string">&quot;storage-driver&quot;</span>: <span class="hljs-string">&quot;overlay2&quot;</span>,
+  <span class="hljs-string">&quot;storage-opts&quot;</span>: [
+    <span class="hljs-string">&quot;overlay2.override_kernel_check=true&quot;</span>
+  ],
+  <span class="hljs-string">&quot;log-driver&quot;</span>: <span class="hljs-string">&quot;json-file&quot;</span>,
+  <span class="hljs-string">&quot;log-opts&quot;</span>: {
+    <span class="hljs-string">&quot;max-size&quot;</span>: <span class="hljs-string">&quot;100m&quot;</span>,
+    <span class="hljs-string">&quot;max-file&quot;</span>: <span class="hljs-string">&quot;3&quot;</span>
+  }
+}
+EOF
+systemctl <span class="hljs-built_in">enable</span> docker
+systemctl start docker
+</code></pre>
+<h3 id="docker-compose-&#x5B89;&#x88C5;">docker-compose &#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># pip install </span>
+<span class="hljs-built_in">export</span> http_proxy=http://10.90.11.11:3128
+<span class="hljs-built_in">export</span> https_proxy=http://10.90.11.11:3128
+<span class="hljs-built_in">cd</span> /data/soft
+yum install wget -y
+wget --no-check-certificate https://pypi.python.org/packages/<span class="hljs-built_in">source</span>/s/setuptools/setuptools-12.0.3.tar.gz<span class="hljs-comment">#md5=f07e4b0f4c1c9368fcd980d888b29a65 </span>
+tar -zxvf setuptools-12.0.3.tar.gz
+<span class="hljs-built_in">cd</span> setuptools-12.0.3
+python setup.py install
+
+<span class="hljs-built_in">cd</span> /data/soft
+wget http://10.21.8.20/soft/pip-9.0.1.tar.gz
+tar zxvf pip-9.0.1.tar.gz
+<span class="hljs-built_in">cd</span> pip-9.0.1
+python setup.py install
+pip install --upgrade pip 
+
+pip install docker-compose
+
+<span class="hljs-comment"># docker-compose version</span>
+docker-compose version 1.24.0, build 0aa5906
+docker-py version: 3.7.2
+CPython version: 2.7.5
+OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+</code></pre>
+<h3 id="golang&#x5B89;&#x88C5;">golang&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash">yum install golang -y
+<span class="hljs-comment"># go version</span>
+go version go1.11.5 linux/amd64
+</code></pre>
+<h3 id="harbor&#x5B89;&#x88C5;">harbor&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash">wget https://storage.googleapis.com/harbor-releases/release-1.7.0/harbor-offline-installer-v1.7.5.tgz
+tar zxvf harbor-offline-installer-v1.7.5.tgz
+<span class="hljs-built_in">cd</span> harbor
+./install
+
+
+<span class="hljs-comment"># &#x9ED8;&#x8BA4;&#x7684;&#x5E10;&#x53F7;&#x5BC6;&#x7801;&#x662F;admin, Harbor12345</span>
+docker-compose ps  <span class="hljs-comment">#&#x67E5;&#x770B;compose&#x72B6;&#x6001;</span>
+</code></pre>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<p><a href="https://github.com/goharbor/harbor/blob/master/docs/installation_guide.md" target="_blank">insallation_guide</a></p>
+<p><a href="https://blog.51cto.com/slitobo/2323332" target="_blank">&#x4F01;&#x4E1A;&#x7EA7;&#x955C;&#x50CF;&#x4ED3;&#x5E93;harbor&#x642D;&#x5EFA;(http/https)&#x53CA;&#x4F7F;&#x7528;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dockertls.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: docker-tls">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"harbor","level":"1.2.4","depth":2,"next":{"title":" kubernetes","level":"1.3","depth":1,"ref":"","articles":[{"title":"kubernetes component","level":"1.3.1","depth":2,"path":"chapters/kubernetes/component.md","ref":"chapters/kubernetes/component.md","articles":[]},{"title":"concept","level":"1.3.2","depth":2,"path":"chapters/kubernetes/concept.md","ref":"chapters/kubernetes/concept.md","articles":[]},{"title":"相关端口","level":"1.3.3","depth":2,"path":"chapters/kubernetes/port.md","ref":"chapters/kubernetes/port.md","articles":[]},{"title":"certs","level":"1.3.4","depth":2,"path":"chapters/kubernetes/certs.md","ref":"chapters/kubernetes/certs.md","articles":[]},{"title":"services","level":"1.3.5","depth":2,"path":"chapters/kubernetes/services.md","ref":"chapters/kubernetes/services.md","articles":[]},{"title":"liveness和readiness","level":"1.3.6","depth":2,"path":"chapters/kubernetes/probe.md","ref":"chapters/kubernetes/probe.md","articles":[]},{"title":"statefulset","level":"1.3.7","depth":2,"path":"chapters/kubernetes/statefuleset.md","ref":"chapters/kubernetes/statefuleset.md","articles":[]}]},"previous":{"title":"docker-tls","level":"1.2.3","depth":2,"path":"chapters/docker/dockertls.md","ref":"chapters/docker/dockertls.md","articles":[]},"dir":"ltr"},"config":{"plugins":["lunr","pageview-count","code","expandable-chapters","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"pageview-count":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper"],"douban":true,"facebook":true,"weibo":false,"instapaper":false,"twitter":true,"vk":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"llussy <usanfeng@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kubernetes GitBook","gitbook":"*","description":"study kubernetes notes created by gitbook"},"file":{"path":"chapters/docker/harbor.md","mtime":"2020-07-26T07:56:08.398Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-26T08:08:15.618Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
