@@ -25,7 +25,7 @@
   * []()
   * []()
 * [storage]()
-  * [k8s存储](chapters/stoage/k8s-storage.md)
+  * [k8s存储](chapters/storage/k8s-storage.md)
 * [helm]()
 * [ingress]()
 * [etcd]()
