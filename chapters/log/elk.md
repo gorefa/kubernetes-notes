@@ -1,5 +1,5 @@
 
-[TOC]
+[toc]
 
 日志流： **filebeat --> kafka--> logstash-->es**
 
@@ -239,12 +239,11 @@ output {
 ```
 **output关键配置**
 
-```index => "kubernetes-%{[kubernetes][namespace]}-%{+YYYY.MM.dd}"```
+**index => "kubernetes-%{[kubernetes][namespace]}-%{+YYYY.MM.dd}"**
 
 ### es
 
-动态调试索引模板。
-
+**动态调试索引模板。**
 ```bash
 curl -u elastic:y16a5zzjKIM -XPUT 'http://es:9200/_template/log-k8s-template?pretty' -H 'Content-Type: application/json' -d'
 {
@@ -260,3 +259,10 @@ curl -u elastic:y16a5zzjKIM -XPUT 'http://es:9200/_template/log-k8s-template?pre
 }'
 ```
 
+### 相关资料
+
+[k8s日志收集实战](https://juejin.im/post/5b6eaef96fb9a04fa25a0d37)
+
+[ELK实时日志分析平台环境部署--完整记录](https://www.cnblogs.com/kevingrace/p/5919021.html)
+
+[ctsdb对接ELK生态组件及grafana](https://cloud.tencent.com/developer/article/1146988)
