@@ -65,3 +65,4 @@ failureThreshold：探测成功后，最少连续探测失败多少次才被认�
 [Kubernetes应用健康检查](https://blog.csdn.net/asdf57847225/article/details/78269506)
 
 [官方文档](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)
+

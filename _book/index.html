@@ -21,10 +21,6 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
@@ -195,9 +191,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="chapters/kubernetes/component.html">
+        <li class="chapter " data-level="1.3.1" data-path="chapters/kubernetes/component.md">
             
-                <a href="chapters/kubernetes/component.html">
+                <span>
             
                     
                     kubernetes component
@@ -221,9 +217,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="chapters/kubernetes/port.html">
+        <li class="chapter " data-level="1.3.3" data-path="chapters/kubernetes/port.md">
             
-                <a href="chapters/kubernetes/port.html">
+                <span>
             
                     
                     相关端口
@@ -296,7 +292,7 @@
                 <span>
             
                     
-                    prometheus
+                    montior
             
                 </span>
             
@@ -305,9 +301,36 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="chapters/prometheus/prometheus.html">
+        <li class="chapter " data-level="1.4.1" data-path="chapters/monitor/cAdvisor.html">
             
-                <a href="chapters/prometheus/prometheus.html">
+                <a href="chapters/monitor/cAdvisor.html">
+            
+                    
+                    cAdvisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    promethues
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="chapters/monitor/prometheus/prometheus.html">
+            
+                <a href="chapters/monitor/prometheus/prometheus.html">
             
                     
                     prometheus
@@ -318,9 +341,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="chapters/prometheus/query.html">
+        <li class="chapter " data-level="1.4.2.2" data-path="chapters/monitor/prometheus/query.html">
             
-                <a href="chapters/prometheus/query.html">
+                <a href="chapters/monitor/prometheus/query.html">
             
                     
                     query
@@ -331,9 +354,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="chapters/prometheus/metrics.html">
+        <li class="chapter " data-level="1.4.2.3" data-path="chapters/monitor/prometheus/metrics.html">
             
-                <a href="chapters/prometheus/metrics.html">
+                <a href="chapters/monitor/prometheus/metrics.html">
             
                     
                     metrics类型
@@ -344,7 +367,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="chapters/prometheus/job.md">
+        <li class="chapter " data-level="1.4.2.4" data-path="chapters/monitor/prometheus/job.md">
             
                 <span>
             
@@ -357,9 +380,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="chapters/prometheus/pushgateway.html">
+        <li class="chapter " data-level="1.4.2.5" data-path="chapters/monitor/prometheus/pushgateway.html">
             
-                <a href="chapters/prometheus/pushgateway.html">
+                <a href="chapters/monitor/prometheus/pushgateway.html">
             
                     
                     pushgateway
@@ -370,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="chapters/prometheus/consul.html">
+        <li class="chapter " data-level="1.4.2.6" data-path="chapters/monitor/prometheus/consul.html">
             
-                <a href="chapters/prometheus/consul.html">
+                <a href="chapters/monitor/prometheus/consul.html">
             
                     
                     结合consul
@@ -380,6 +403,11 @@
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -443,6 +471,25 @@
                 </span>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="chapters/storage/k8s-storage.html">
+            
+                <a href="chapters/storage/k8s-storage.html">
+            
+                    
+                    k8s存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -588,7 +635,59 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
+                                <h1 id="summary">Summary</h1>
+<ul>
+<li><a href="">docker</a><ul>
+<li><a href="chapters/docker/docker.html">docker</a></li>
+<li><a href="chapters/docker/dockerfile.html">dockerfile</a></li>
+<li><a href="chapters/docker/dockertls.html">docker-tls</a></li>
+<li><a href="chapters/docker/harbor.html">harbor</a></li>
+</ul>
+</li>
+<li><a href=""> kubernetes</a><ul>
+<li><a href="chapters/kubernetes/component.md">kubernetes component</a></li>
+<li><a href="chapters/kubernetes/concept.html">concept</a></li>
+<li><a href="chapters/kubernetes/port.md">&#x76F8;&#x5173;&#x7AEF;&#x53E3;</a></li>
+<li><a href="chapters/kubernetes/certs.html">certs</a></li>
+<li><a href="chapters/kubernetes/services.html">services</a></li>
+<li><a href="chapters/kubernetes/probe.html">liveness&#x548C;readiness</a></li>
+<li><a href="chapters/kubernetes/statefuleset.md">statefulset</a></li>
+</ul>
+</li>
+<li><a href="">montior</a><ul>
+<li><a href="chapters/monitor/cAdvisor.html">cAdvisor</a></li>
+<li><a href="">promethues</a><ul>
+<li><a href="chapters/monitor/prometheus/prometheus.html">prometheus</a></li>
+<li><a href="chapters/monitor/prometheus/query.html">query</a></li>
+<li><a href="chapters/monitor/prometheus/metrics.html">metrics&#x7C7B;&#x578B;</a></li>
+<li><a href="chapters/monitor/prometheus/job.md">job</a></li>
+<li><a href="chapters/monitor/prometheus/pushgateway.html">pushgateway</a></li>
+<li><a href="chapters/monitor/prometheus/consul.html">&#x7ED3;&#x5408;consul</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="">log</a><ul>
+<li><a href="chapters/log/elk.html">elk&#x65E5;&#x5FD7;&#x6536;&#x96C6;</a></li>
+<li><a href="chapters/log/loki.html">loki</a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+</li>
+<li><a href="">storage</a><ul>
+<li><a href="chapters/storage/k8s-storage.html">k8s&#x5B58;&#x50A8;</a></li>
+</ul>
+</li>
+<li><a href="">helm</a></li>
+<li><a href="">ingress</a></li>
+<li><a href="">etcd</a><ul>
+<li><a href="chapters/etcd/etcd-install.html">etcd&#x5B89;&#x88C5;</a></li>
+<li><a href="chapters/etcd/etcd-cmd.html">etcd&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li>
+<li><a href="chapters/etcd/etcd-backup-recover.html">etcd&#x5907;&#x4EFD;&#x6062;&#x590D;</a></li>
+</ul>
+</li>
+<li><a href="chapters/4.md">TODO</a></li>
+</ul>
 
                                 
                                 </section>
@@ -624,7 +723,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"docker","level":"1.2","depth":1,"ref":"","articles":[{"title":"docker","level":"1.2.1","depth":2,"path":"chapters/docker/docker.md","ref":"chapters/docker/docker.md","articles":[]},{"title":"dockerfile","level":"1.2.2","depth":2,"path":"chapters/docker/dockerfile.md","ref":"chapters/docker/dockerfile.md","articles":[]},{"title":"docker-tls","level":"1.2.3","depth":2,"path":"chapters/docker/dockertls.md","ref":"chapters/docker/dockertls.md","articles":[]},{"title":"harbor","level":"1.2.4","depth":2,"path":"chapters/docker/harbor.md","ref":"chapters/docker/harbor.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["lunr","pageview-count","code","expandable-chapters","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"pageview-count":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper"],"douban":true,"facebook":true,"weibo":false,"instapaper":false,"twitter":true,"vk":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"llussy <usanfeng@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kubernetes GitBook","gitbook":"*","description":"study kubernetes notes created by gitbook"},"file":{"path":"README.md","mtime":"2020-07-26T07:55:29.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-26T08:08:15.618Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"docker","level":"1.2","depth":1,"ref":"","articles":[{"title":"docker","level":"1.2.1","depth":2,"path":"chapters/docker/docker.md","ref":"chapters/docker/docker.md","articles":[]},{"title":"dockerfile","level":"1.2.2","depth":2,"path":"chapters/docker/dockerfile.md","ref":"chapters/docker/dockerfile.md","articles":[]},{"title":"docker-tls","level":"1.2.3","depth":2,"path":"chapters/docker/dockertls.md","ref":"chapters/docker/dockertls.md","articles":[]},{"title":"harbor","level":"1.2.4","depth":2,"path":"chapters/docker/harbor.md","ref":"chapters/docker/harbor.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["lunr","pageview-count","expandable-chapters","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"pageview-count":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper"],"douban":true,"facebook":true,"weibo":false,"instapaper":false,"twitter":true,"vk":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"llussy <usanfeng@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kubernetes GitBook","gitbook":"*","description":"study kubernetes notes created by gitbook"},"file":{"path":"README.md","mtime":"2020-07-29T02:53:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-26T08:52:17.068Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -643,10 +742,6 @@
     
         
         <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         
