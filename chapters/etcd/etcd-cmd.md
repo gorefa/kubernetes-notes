@@ -50,6 +50,10 @@ d3824ebb2dadafac: name=yztest-ops-k8s26v8-yz peerURLs=https://10.21.8.26:2380 cl
 ETCDCTL_API=3 ./etcdctl --endpoints "https://10.21.8.24:2379,https://10.21.8.25:2379,https://10.21.8.26:2379" --cacert  /etc/etcd/ssl/etcd-ca.pem --cert /etc/etcd/ssl/etcd.pem --key /etc/etcd/ssl/etcd-key.pem get / --prefix --keys-only
 
 ./etcdctl --endpoints "https://10.21.8.24:2379,https://10.21.8.25:2379,https://10.21.8.26:2379" --ca-file=/etc/etcd/ssl/etcd-ca.pem --cert-file=/etc/etcd/ssl/etcd.pem --key-file=/etc/etcd/ssl/etcd-key.pem get /
+
+
+# k8s中查看,下面为kubeadm安装的etcd
+kubectl  -n kube-system exec -it etcd-yztest-k8s-master-104v8-yz -- etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints "https://10.21.8.104:2379,https://10.21.8.105:2379,https://10.21.8.106:2379" get / --prefix --keys-only 
 ```
 
 #### 查看当前leader

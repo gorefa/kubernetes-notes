@@ -4,8 +4,7 @@
 
 ```dockerfile
 FROM alpine:3.8
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
-RUN apk add --no-cache sed bash
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && apk add --no-cache sed bash
 ```
 
 apk add 安装软件
@@ -13,9 +12,8 @@ apk add 安装软件
 ### redis
 
 ```dockerfile
-FROM docker.ifeng.com/base/alpine:3.4
-RUN apk add --no-cache redis sed bash
-RUN sed -i "s/bind 127.0.0.1/#bind 127.0.0.1/g" /etc/redis.conf
+FROM alpine:3.4
+RUN apk add --no-cache redis sed bash && sed -i "s/bind 127.0.0.1/#bind 127.0.0.1/g" /etc/redis.conf
 COPY run.sh /run.sh
 CMD [ "/run.sh" ]
 ENTRYPOINT [ "bash" ]

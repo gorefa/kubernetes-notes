@@ -1,5 +1,15 @@
 
 
+[toc]
+
+### cgroups
+
+​	cgroups（Control Groups） 是 Linux 内核提供的一种机制，这种机制可以根据特定的行为，把一系列系统任务及其子任务整合（或分隔）到按资源划分等级的不同组内，从而为系统资源管理提供一个统一的框架。
+
+通俗的来说，cgroups 可以限制、记录、隔离进程组所使用的物理资源（包括：CPU、memory、IO 等），为容器实现虚拟化提供了基本保证，是构建 Docker 等一系列虚拟化管理工具的基石。
+
+[Docker 背后的内核知识——cgroups 资源限制](https://www.infoq.cn/article/docker-kernel-knowledge-cgroups-resource-isolation)
+
 ### docker安装
 
 #### centos
@@ -52,15 +62,6 @@ apt-get update
  docker-ce | 18.03.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
  docker-ce | 18.03.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
  docker-ce | 17.12.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.12.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.09.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.09.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.06.2~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.06.1~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.06.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.03.2~ce-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.03.1~ce-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
- docker-ce | 17.03.0~ce-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
  
  
 apt install docker-ce -y
@@ -123,6 +124,11 @@ devicemapper存储空间默认为10G.
 
 ### docker 常用命令
 
+```bash
+# centos 测试容器
+docker run -itd --privileged centos /usr/sbin/init
+```
+
 **查看容器大小**
 
 ```bash
@@ -144,7 +150,7 @@ docker inspect  --format  "{{.NetworkSettings.IPAddress}}" 51d6d51cbe5d  #查看
 docker rm `docker ps -a -q` 
 
 #删除所有退出的容器
-docker rm -v $(docker ps -aq -f status=exited)** 
+docker rm -v $(docker ps -aq -f status=exited)
 ```
 
 **暂停恢复容器**
@@ -161,7 +167,7 @@ docker export 43710668e83c > ubuntu.tar
 cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0
 ```
 
-#### 导入导出镜像
+**导入导出镜像**
 
 ```bash
 docker save centos > /data/iso/centos.tar.gz  #导出镜像 
