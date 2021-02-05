@@ -1,3 +1,5 @@
+[toc]
+
 ### etcd v3 备份集群
 
 恢复集群首先需要来自 etcd 成员的键空间的快照。快速可以是用 `etcdctl snapshot save` 命令从活动成员获取，或者是从 etcd 数据目录复制 `member/snap/db` 文件. 例如，下列命令快照在 `$ENDPOINT` 上服务的键空间到文件 `snapshot.db`:

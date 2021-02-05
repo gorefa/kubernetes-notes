@@ -2,7 +2,13 @@
 
 ## deployment
 
-deployment主要职责是为了保证pod的数量和健康：
+Deployment 只负责管理不同版本的 ReplicaSet，由 ReplicaSet 来管理具体的 Pod 副本数，每个 ReplicaSet 对应 Deployment template 的一个版本。
+
+Deployment 创建 ReplicaSet，而 ReplicaSet 创建 Pod。他们的 OwnerRef 其实都对应了其控制器的资源。
+
+
+
+deployment主要职责是为了保证pod的数量和健康。
 
 功能：
 
