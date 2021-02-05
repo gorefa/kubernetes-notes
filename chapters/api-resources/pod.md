@@ -1,5 +1,13 @@
 [toc]
 
+Pod 是 Kubernetes 分配资源的一个单位，因为里面的容器要共享某些资源(Network Namespace)，所以 Pod 也是 Kubernetes 的原子调度单位。
+
+pod实现共享资源的实现是 会额外创建一个pause容器。
+
+### initContainers
+
+[init-containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+
 ### 从外部访问pod
 
 ```bash

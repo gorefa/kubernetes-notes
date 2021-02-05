@@ -1,3 +1,11 @@
+StatefulSet 是 Kubernetes 为了运行有状态服务引入的资源。
+
+StatefulSet 不仅能管理 Pod 的对象，还它能够保证这些 Pod 的顺序性和唯一性。
+
+
+
+
+
 ### statefuleset example
 
 ```yaml

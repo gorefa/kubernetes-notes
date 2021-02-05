@@ -285,7 +285,7 @@ subjects:
 
 点击 Manage Jenkins —> Configure System —> (拖到最下方)Add a new cloud —> 选择 Kubernetes，然后填写 Kubernetes 和 Jenkins 配置信息。
 
-![image-20200804093257672](/Users/lisai/go/src/llussy.github.io/images/image-20200804093257672.png)
+![image-20200804093257672](https://llussy.github.io/images/image-20200804093257672.png)
 
 Kubernetes server certificate key 为  /etc/kubernetes/pki/ca.crt内容。
 
@@ -329,15 +329,15 @@ ENTRYPOINT ["jenkins-slave"]
 
 
 
-![image-20200806133004992](/Users/lisai/go/src/llussy.github.io/images/image-20200806133004992.png)
+![image-20200806133004992](https://llussy.github.io/images/image-20200806133004992.png)
 
 **挂载相应目录**
 
-![image-20200806133033783](/Users/lisai/go/src/llussy.github.io/images/image-20200806133033783.png)
+![image-20200806133033783](https://llussy.github.io/images/image-20200806133033783.png)
 
 **add sa**
 
-![image-20200806133053103](/Users/lisai/go/src/llussy.github.io/images/image-20200806133053103.png)
+![image-20200806133053103](https://llussy.github.io/images/image-20200806133053103.png)
 
 ### sample Freestyle project
 
