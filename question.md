@@ -24,15 +24,15 @@
 
 ##### kubelet
 
-每个节点上运行的代理，确保容器处于运行状态且健康。会定期想master汇报资源使用情况。
+每个节点上运行的代理，确保容器处于运行状态且健康。会定期向 master 汇报资源使用情况。
 
 ### 一个pod创建流程
 
-可通过kubectl或yaml创建pod请求
+可通过 kubectl 或 yaml 创建pod请求
 
 apiserver接收到请求后,会存储pod数据到etcd
 
-scheduler的watch接口会从apiserver处监听到新建pod的信息，scheduler会根据集群的整体信息，选出最优的node进行调度,会通过apiserver将信息写到etcd里
+scheduler的watch接口会从apiserver处监听到新建pod的信息,根据集群的整体信息，选出最优的node进行调度,会通过apiserver将信息写到etcd里
 
 目标node上的kubelet通过apiserver监听到新建的pod,会去调用Container Runtime Interface (CRI) 创建相应pod.
 
@@ -44,7 +44,7 @@ pod跨node的通信
 
 网络性能
 
-网络插件成熟度 
+网络插件成熟度
 
 网络策略
 
@@ -68,9 +68,11 @@ kube-scheduler 未正常运行
 
 镜像不存在
 
+健康检查不通过
+
 #### 排查思路
 
-kubectl describe pod 查看具体信息 
+kubectl describe pod 查看具体信息 大部分是健康检查不通过
 
 到相应node上查看具体日志
 
@@ -108,7 +110,7 @@ deployment  strategy  RollingUpdate
 
 多个pod时，会按照顺序(序列号)滚动更新，每一个 Pod 都正常运行时才会继续处理下一个 Pod。
 
-### 基本就是继续k8s架构问，，遇到的问题，怎么处理
+### 遇到的问题，怎么处理
 
 https://llussy.github.io/2020/09/04/kubernetes-troubleshooting/
 
@@ -166,6 +168,16 @@ node notready 5min,pod 会驱逐到其他节点。
 
 ### sidecar要保证顺序启动怎么保证？几种方式可以做到？
 
+**postStart 执行当前容器的健康检查代码就可以控制容器的启动顺序**
+
+K8S 在启动同一个 Pod 里容器时，其启动顺序会按照配置文件中的顺序去启动（注意，在这里它并不会等容器启动完成才继续），而当你为某一个容器增加 postStart Hook 之后，K8S 的启动流程会被这个 Hook 给阻塞住，直到 Hook 完成了，才会继续往下执行。这样一来只需要在容器的 postStart Hook 里执行对当前容器的状态的查询代码、直到容器内进程或服务状态正常才退出，就可以保证在下一个容器启动前，该容器能正常提供服务。
+
+
+
+https://aber.sh/articles/Control-the-startup-sequence-of-containers-in-Pod/
+
+
+
 ### 有了解过qos吗？ 怎么实现的？
 
 qos三种 *Guaranteed*, *Burstable*, and *Best-Effort*，它们的QoS级别依次递减。
@@ -185,8 +197,6 @@ qos三种 *Guaranteed*, *Burstable*, and *Best-Effort*，它们的QoS级别依�
 ### 详述kube-proxy原理
 
 监听 API server 中 service 和 endpoint 的变化情况，并通过 iptables 等来为服务配置负载均衡
-
-
 
 kube-proxy的作用主要是负责service的实现
 
