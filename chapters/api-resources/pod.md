@@ -85,14 +85,14 @@ K8S 有个特色功能叫 pod eviction，它在某些场景下如节点 NotReady
 
 Kube-controller-manager 周期性检查节点状态，每当节点状态为 NotReady，并且超出 podEvictionTimeout 时间后，就把该节点上的 pod 全部驱逐到其它节点，其中具体驱逐速度还受驱逐速度参数，集群大小等的影响。最常用的 2 个参数如下：
 
-- –pod-eviction-timeout：NotReady 状态节点超过该时间后，执行驱逐，默认 5 min。
-- –node-eviction-rate：驱逐速度，默认为 0.1 pod/秒
+- --pod-eviction-timeout：NotReady 状态节点超过该时间后，执行驱逐，默认 5 min。
+- --node-eviction-rate：驱逐速度，默认为 0.1 pod/秒
 
 当某个 zone 故障节点的数目超过一定阈值时，采用二级驱逐速度进行驱逐。
 
-- –large-cluster-size-threshold：判断集群是否为大集群，默认为 50，即 50 个节点以上的集群为大集群。
-- –unhealthy-zone-threshold：故障节点数比例，默认为 55%
-- –secondary-node-eviction-rate：当大集群的故障节点超过 55% 时，采用二级驱逐速率，默认为 0.01 pod／秒。当小集群故障节点超过 55% 时，驱逐速率为 0 pod／秒。
+- --large-cluster-size-threshold：判断集群是否为大集群，默认为 50，即 50 个节点以上的集群为大集群。
+- --unhealthy-zone-threshold：故障节点数比例，默认为 55%
+- --secondary-node-eviction-rate：当大集群的故障节点超过 55% 时，采用二级驱逐速率，默认为 0.01 pod／秒。当小集群故障节点超过 55% 时，驱逐速率为 0 pod／秒。
 
 判断是否驱逐的代码如下：
 

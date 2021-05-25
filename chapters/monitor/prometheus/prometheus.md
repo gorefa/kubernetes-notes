@@ -2,7 +2,7 @@
 
 Prometheus是一个开源的完整监控解决方案，涵盖数据采集、查询、告警、展示整个监控流程，下图是Prometheus的架构图：
 
-![image-20190420111631110](https://llussy.github.io/images/image-20190420111631110.png)
+<img src="https://llussy.github.io/images/image-20190420111631110.png" alt="image-20190420111631110" style="zoom: 50%;" />
 
 #### Prometheus Server
 

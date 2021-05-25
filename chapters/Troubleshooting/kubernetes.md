@@ -46,7 +46,7 @@ linux内核版本太低(centos7.6.1810 内核版本：3.10.0-957.el7.x86_64)，�
 
 node上如果有容器一直重启，可能会造成内存无法快速回收，造成oom,严重时系统组件(如calico)被kill掉。
 
-kubelet会优先kill掉qos为**Burstable**的pod。系统组件要注意一定要设置成**Guaranteed**
+kubelet会优先kill掉qos为***Best-Effort***的pod。系统组件要注意一定要设置成**Guaranteed**
 
  **解决办法**
 
