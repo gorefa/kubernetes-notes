@@ -12,9 +12,7 @@ tar zxvf helm-v3.2.4-linux-amd64.tar.gz
 cd linux-amd64
 mv helm /usr/local/bin/
 
-
 source <(helm completion bash)
-
 
 
 # 增加国内源

@@ -44,8 +44,8 @@
       # We set an `emptyDir` here to ensure the manifest will deploy correctly.
       # It's recommended to change this to a `hostPath` folder, to ensure internal data
       # files survive pod changes (ie: version upgrade)
-#      - name: data
-#        emptyDir: {}
+      # - name: data
+      # emptyDir: {}
       - name: data
         hostPath:
           path: /data/site
